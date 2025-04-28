@@ -21,7 +21,7 @@ export function HomeHero() {
         effect="fade"
         navigation
         pagination={{ clickable: true }}
-        autoplay={{ delay: 5000 }}
+        autoplay={{ delay: 1800 }}
         className="h-full"
       >
         {slides.map((slide, index) => (
