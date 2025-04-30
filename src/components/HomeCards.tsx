@@ -51,7 +51,7 @@ const HomeCards = () => {
     <>
       <section className="py-16 px-6 max-w-7xl mx-auto cursor-pointer">
         {/* Heading */}
-        <h2 className="text-3xl md:text-3xl font-bold mb-8">Products</h2>
+        <h2 className="text-3xl md:text-3xl font-bold mb-8">Categories</h2>
 
         {/* Card Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-8">

@@ -34,15 +34,15 @@ const HomeNavbar = () => {
   const components: { title: string; href: string }[] = [
     {
       title: "Building materials",
-      href: "/docs/primitives/alert-dialog",
+      href: "/categories/building-materials",
     },
     {
       title: "Fire and Safety materials",
-      href: "/docs/primitives/alert-dialog",
+      href: "/categories/fire-safety",
     },
     {
       title: "Scaffolding",
-      href: "/docs/primitives/alert-dialog",
+      href: "/categories/scaffolding",
     },
   ];
   return (
@@ -53,7 +53,9 @@ const HomeNavbar = () => {
           className="sm:hidden"
         />
         <NavbarBrand>
-          <p className="font-bold text-inherit">RIMAC</p>
+          <Link href="/" className="font-bold text-inherit">
+            RIMAC
+          </Link>
         </NavbarBrand>
       </NavbarContent>
 
@@ -62,7 +64,7 @@ const HomeNavbar = () => {
           <NavigationMenuList>
             <NavigationMenuItem>
               <NavigationMenuTrigger className="bg-transparent">
-                Products
+                <Link href="/categories">Categories</Link>
               </NavigationMenuTrigger>
               <NavigationMenuContent>
                 <ul className="grid w-[100px] gap-3 p-2 md:w-[200px] md:grid-cols-1 lg:w-[200px] ">
