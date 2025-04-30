@@ -23,13 +23,34 @@ import {
 const HomeNavbar = () => {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
   const menuItems = [
-    "Building materials",
-    "Fire and Safety materials",
-    "Scaffolding",
-    "Projects",
-    "About Us",
-    "Testimonials",
-    "Contact Us",
+    {
+      title: "Building materials",
+      href: "/categories/building-materials",
+    },
+    {
+      title: "Fire and Safety materials",
+      href: "/categories/fire-safety",
+    },
+    {
+      title: "Scaffolding",
+      href: "/categories/scaffolding",
+    },
+    {
+      title: "Projects",
+      href: "/projects",
+    },
+    {
+      title: "About Us",
+      href: "/about-us",
+    },
+    {
+      title: "Testimonials",
+      href: "/testimonials",
+    },
+    {
+      title: "Contact Us",
+      href: "/contact-us",
+    },
   ];
   const components: { title: string; href: string }[] = [
     {
@@ -112,8 +133,8 @@ const HomeNavbar = () => {
       <NavbarMenu className="gap-5">
         {menuItems.map((item, index) => (
           <NavbarMenuItem key={`${item}-${index}`}>
-            <Link className="w-full" color="primary" href="#" size="lg">
-              {item}
+            <Link className="w-full" color="primary" href={item.href} size="lg">
+              {item.title}
             </Link>
           </NavbarMenuItem>
         ))}

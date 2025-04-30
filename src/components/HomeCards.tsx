@@ -1,22 +1,26 @@
 "use client";
 import { motion } from "framer-motion";
 import { ShieldCheck, Truck, Users, Leaf } from "lucide-react"; // Using lucide-react icons
+import Link from "next/link";
 
 const services = [
   {
     title: "Building materials",
     image:
       "https://images.unsplash.com/photo-1672541298906-4aeb3edd3520?q=80&w=3269&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    href: "/categories/building-materials",
   },
   {
     title: "Fire and Safety materials",
     image:
       "https://images.unsplash.com/photo-1743422855094-25954652f8ad?q=80&w=3270&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    href: "/categories/fire-safety",
   },
   {
     title: "Scaffolding",
     image:
       "https://images.unsplash.com/photo-1626471671222-9d89fe4c2668?q=80&w=3270&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    href: "/categories/scaffolding",
   },
 ];
 
@@ -56,7 +60,8 @@ const HomeCards = () => {
         {/* Card Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-8">
           {services.map((service, index) => (
-            <div
+            <Link
+              href={service.href}
               key={index}
               className="relative h-72 rounded-xl overflow-hidden shadow-lg group"
             >
@@ -77,7 +82,7 @@ const HomeCards = () => {
                   {service.title}
                 </h3>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </section>
