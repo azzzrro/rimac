@@ -97,11 +97,16 @@ export default function ProductPage() {
                 alt={name}
                 fill
                 unoptimized
-                className="object-cover"
+                className="object-contain"
               />
             </motion.div>
 
-            <motion.div variants={item} className="grid grid-cols-3 gap-4">
+            <motion.div
+              variants={item}
+              className={`grid p-1 grid-cols-4 gap-4 ${
+                images.length > 4 ? "overflow-x-scroll" : ""
+              }`}
+            >
               {images.map((img: string, index: number) => (
                 <button
                   key={index}

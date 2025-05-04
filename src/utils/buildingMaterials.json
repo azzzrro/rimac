@@ -1,0 +1,690 @@
+[
+  {
+    "id": 1,
+    "name": "Burlap",
+    "images": [
+      "/building-materials/Insulation_and_conrete_work_acc/Burlap.png"
+    ],
+    "subcategory": "Insulation & Concrete Work Accessories"
+  },
+  {
+    "id": 2,
+    "name": "Polyethylene Sheet", 
+    "images": [
+      "/building-materials/Insulation_and_conrete_work_acc/Polyethylene Sheet.png"
+    ],
+    "subcategory": "Insulation & Concrete Work Accessories"
+  },
+  {
+    "id": 3,
+    "name": "Hyperseal DP",
+    "images": [
+      "/building-materials/Insulation_and_conrete_work_acc/Hyperseal DP.png"
+    ],
+    "subcategory": "Insulation & Concrete Work Accessories"
+  },
+  {
+    "id": 4,
+    "name": "PVC Water Stop",
+    "images": [
+      "/building-materials/Insulation_and_conrete_work_acc/PVC Water Stop.png"
+    ],
+    "subcategory": "Insulation & Concrete Work Accessories"
+  },
+  {
+    "id": 5,
+    "name": "Geotextile",
+    "images": [
+      "/building-materials/Insulation_and_conrete_work_acc/Geotextile.png"
+    ],
+    "subcategory": "Insulation & Concrete Work Accessories"
+  },
+  {
+    "id": 6,
+    "name": "Protection Board",
+    "images": [
+      "/building-materials/Insulation_and_conrete_work_acc/Protection Board.png"
+    ],
+    "subcategory": "Insulation & Concrete Work Accessories"
+  },
+  {
+    "id": 7,
+    "name": "Extruded Polystyrene",
+    "images": [
+      "/building-materials/Insulation_and_conrete_work_acc/Extruded Polystyrene.png"
+    ],
+    "subcategory": "Insulation & Concrete Work Accessories"
+  },
+  {
+    "id": 8,
+    "name": "Stud & Runner",
+    "images": [
+      "/building-materials/Insulation_and_conrete_work_acc/Stud & Runner.png"
+    ],
+    "subcategory": "Insulation & Concrete Work Accessories"
+  },
+  {
+    "id": 9,
+    "name": "Cork Sheet",
+    "images": [
+      "/building-materials/Insulation_and_conrete_work_acc/Cork Sheet.png"
+    ],
+    "subcategory": "Insulation & Concrete Work Accessories"
+  },
+  {
+    "id": 10,
+    "name": "Concrete Spacers",
+    "images": [
+      "/building-materials/Insulation_and_conrete_work_acc/Concrete Spacers.png"
+    ],
+    "subcategory": "Insulation & Concrete Work Accessories"
+  },
+  {
+    "id": 11,
+    "name": "Plastic spacers",
+    "images": [
+      "/building-materials/Insulation_and_conrete_work_acc/Plastic spacers.png"
+    ],
+    "subcategory": "Insulation & Concrete Work Accessories"
+  },
+  {
+    "id": 12,
+    "name": "Protection Board",
+    "images": [
+      "/building-materials/Insulation_and_conrete_work_acc/Protection Board_2.png"
+    ],
+    "subcategory": "Insulation & Concrete Work Accessories"
+  },
+  {
+    "id": 13,
+    "name": "The Rod & Accessories",
+    "images": [
+      "/building-materials/Insulation_and_conrete_work_acc/Tie rod and acc.png"
+    ],
+    "subcategory": "Insulation & Concrete Work Accessories"
+  },
+  {
+    "id": 14,
+    "name": "Block Ladder",
+    "images": [
+      "/building-materials/block_work_&_plastering_acc/Block Ladder.png"
+    ],
+    "subcategory": "Block Work & Plastering Accessories"
+  },
+  {
+    "id": 15,
+    "name": "Truss Type",
+    "images": [
+      "/building-materials/block_work_&_plastering_acc/Truss Type.png"
+    ],
+    "subcategory": "Block Work & Plastering Accessories"
+  },
+  {
+    "id": 16,
+    "name": "Steel Lintel & Angle",
+    "images": [
+      "/building-materials/block_work_&_plastering_acc/Steel Lintel & Angle.png"
+    ],
+    "subcategory": "Block Work & Plastering Accessories"
+  },
+  {
+    "id": 17,
+    "name": "Corner Mesh",
+    "images": [
+      "/building-materials/block_work_&_plastering_acc/Corner Mesh.png"
+    ],
+    "subcategory": "Block Work & Plastering Accessories"
+  },
+  {
+    "id": 18,
+    "name": "Corner Bead",
+    "images": [
+      "/building-materials/block_work_&_plastering_acc/Corner Bead.png"
+    ],
+    "subcategory": "Block Work & Plastering Accessories"
+  },
+  {
+    "id": 19,
+    "name": "Plaster Stop",
+    "images": [
+      "/building-materials/block_work_&_plastering_acc/Plaster Stop.png"
+    ],
+    "subcategory": "Block Work & Plastering Accessories"
+  },
+  {
+    "id": 20,
+    "name": "Architrave Bead",
+    "images": [
+      "/building-materials/block_work_&_plastering_acc/Architrave Bead.png"
+    ],
+    "subcategory": "Block Work & Plastering Accessories"
+  },
+  {
+    "id": 21,
+    "name": "Archetrave Bead Double Side Mesh",
+    "images": [
+      "/building-materials/block_work_&_plastering_acc/Archetrave Bead Double Side Mesh.png"
+    ],
+    "subcategory": "Block Work & Plastering Accessories"
+  },
+  {
+    "id": 22,
+    "name": "Control Joint",
+    "images": [
+      "/building-materials/block_work_&_plastering_acc/Control Joint.png"
+    ],
+    "subcategory": "Block Work & Plastering Accessories"
+  },
+  {
+    "id": 23,
+    "name": "Butterfly Wall Tie",
+    "images": [
+      "/building-materials/block_work_and_plastering_2/Butterfly Wall Tie.png"
+    ],
+    "subcategory": "Block Work & Plastering Accessories"
+  },
+  {
+    "id": 24,
+    "name": "Corrugated Angle & Strip",
+    "images": [
+      "/building-materials/block_work_and_plastering_2/Corrugated Angle & Strip.png"
+    ],
+    "subcategory": "Block Work & Plastering Accessories"
+  },
+  {
+    "id": 25,
+    "name": "Fiber Mesh",
+    "images": [
+      "/building-materials/block_work_and_plastering_2/Fiber Mesh.png"
+    ],
+    "subcategory": "Block Work & Plastering Accessories"
+  },
+  {
+    "id": 26,
+    "name": "Sheet Lath",
+    "images": [
+      "/building-materials/block_work_and_plastering_2/Sheet Lath.png"
+    ],
+    "subcategory": "Block Work & Plastering Accessories"
+  },
+  {
+    "id": 27,
+    "name": "Hy Rib",
+    "images": [
+      "/building-materials/block_work_and_plastering_2/Hy Rib.png"
+    ],
+    "subcategory": "Block Work & Plastering Accessories"
+  },
+  {
+    "id": 28,
+    "name": "Rib Lath",
+    "images": [
+      "/building-materials/block_work_and_plastering_2/Rib Lath.png"
+    ],
+    "subcategory": "Block Work & Plastering Accessories"
+  },
+  {
+    "id": 29,
+    "name": "Top Rod Anchor",
+    "images": [
+      "/building-materials/block_work_and_plastering_2/Top Rod Anchor.png"
+    ],
+    "subcategory": "Block Work & Plastering Accessories"
+  },
+  {
+    "id": 30,
+    "name": "Adjustable Head",
+    "images": [
+      "/building-materials/block_work_and_plastering_2/Adjustable Head.png"
+    ],
+    "subcategory": "Block Work & Plastering Accessories"
+  },
+  {
+    "id": 31,
+    "name": "Ceiling Type",
+    "images": [
+      "/building-materials/block_work_and_plastering_2/Ceiling Type.png"
+    ],
+    "subcategory": "Block Work & Plastering Accessories"
+  },
+  {
+    "id": 32,
+    "name": "Coil Lath",
+    "images": [
+      "/building-materials/block_work_and_plastering_2/Coil Lath.png"
+    ],
+    "subcategory": "Block Work & Plastering Accessories"
+  },
+  {
+    "id": 33,
+    "name": "Clamp Scaffolding",
+    "images": [
+      "/building-materials/materials_for_construction/Clamp Scaffolding.png"
+    ],
+    "subcategory": "Materials For Construction"
+  },
+  {
+    "id": 34,
+    "name": "Corrugated Sheet",
+    "images": [
+      "/building-materials/materials_for_construction/Corrugated Sheet.png"
+    ],
+    "subcategory": "Materials For Construction"
+  },
+  {
+    "id": 35,
+    "name": "Strip & Nail Gun",
+    "images": [
+      "/building-materials/materials_for_construction/Strip & Nail Gun.png"
+    ],
+    "subcategory": "Materials For Construction"
+  },
+  {
+    "id": 36,
+    "name": "Hand Tools",
+    "images": [
+      "/building-materials/materials_for_construction/Hand Tools.png"
+    ],
+    "subcategory": "Materials For Construction"
+  },
+  {
+    "id": 37,
+    "name": "Black Annealed Wire",
+    "images": [
+      "/building-materials/materials_for_construction/Black Annealed Wire.png"
+    ],
+    "subcategory": "Materials For Construction"
+  },
+  {
+    "id": 38,
+    "name": "Binding Wire",
+    "images": [
+      "/building-materials/materials_for_construction/Binding Wire.png"
+    ],
+    "subcategory": "Materials For Construction"
+  },
+  {
+    "id": 39,
+    "name": "Scaffolding",
+    "images": [
+      "/building-materials/materials_for_construction/Scaffolding.png"
+    ],
+    "subcategory": "Materials For Construction"
+  },
+  {
+    "id": 40,
+    "name": "Concrete & Wood Nail",
+    "images": [
+      "/building-materials/materials_for_construction/Concrete & Wood Nail.png"
+    ],
+    "subcategory": "Materials For Construction"
+  },
+  {
+    "id": 41,
+    "name": "Power Tools",
+    "images": [
+      "/building-materials/materials_for_construction/Power Tools.png"
+    ],
+    "subcategory": "Materials For Construction"
+  },
+  {
+    "id": 42,
+    "name": "GUN",
+    "images": [
+      "/building-materials/materials_for_construction/GUN.png"
+    ],
+    "subcategory": "Materials For Construction"
+  },
+  {
+    "id": 43,
+    "name": "Rapid & Shuttering Clamp",
+    "images": [
+      "/building-materials/materials_for_construction/Rapid & Shuttering Clamp.png"
+    ],
+    "subcategory": "Materials For Construction"
+  },
+  {
+    "id": 44,
+    "name": "Timber",
+    "images": [
+      "/building-materials/plywood_and_timber/Timber.png"
+    ],
+    "subcategory": "Plywood & Timber"
+  },
+  {
+    "id": 45,
+    "name": "Jamco Red Wood",
+    "images": [
+      "/building-materials/plywood_and_timber/Jamco Red Wood.png"
+    ],
+    "subcategory": "Plywood & Timber"
+  },
+  {
+    "id": 46,
+    "name": "F Fly Wood",
+    "images": [
+      "/building-materials/plywood_and_timber/F Fly Wood.png"
+    ],
+    "subcategory": "Plywood & Timber"
+  },
+  {
+    "id": 47,
+    "name": "Fly Wood",
+    "images": [
+      "/building-materials/plywood_and_timber/Fly Wood.png"
+    ],
+    "subcategory": "Plywood & Timber"
+  },
+  {
+    "id": 48,
+    "name": "Jamco Plywood",
+    "images": [
+      "/building-materials/plywood_and_timber/Jamco Plywood.png"
+    ],
+    "subcategory": "Plywood & Timber"
+  },
+  {
+    "id": 49,
+    "name": "PP Film Faced Plywood",
+    "images": [
+      "/building-materials/plywood_and_timber/PP Film Faced Plywood.png"
+    ],
+    "subcategory": "Plywood & Timber"
+  },
+  {
+    "id": 50,
+    "name": "Joker Plex",
+    "images": [
+      "/building-materials/plywood_and_timber/Joker Plex.png"
+    ],
+    "subcategory": "Plywood & Timber"
+  },
+  {
+    "id": 51,
+    "name": "Jamco Savez",
+    "images": [
+      "/building-materials/plywood_and_timber/Jamco Savez.png"
+    ],
+    "subcategory": "Plywood & Timber"
+  },
+  {
+    "id": 52,
+    "name": "Rilico RED",
+    "images": [
+      "/building-materials/plywood_and_timber/Rilico RED.png"
+    ],
+    "subcategory": "Plywood & Timber"
+  },
+  {
+    "id": 53,
+    "name": "Gypsum Board",
+    "images": [
+      "/building-materials/gypsum_and_partitioning/Gypsum Board.png"
+    ],
+    "subcategory": "Gypsum & Partitioning Solutions"
+  },
+  {
+    "id": 54,
+    "name": "Ceiling Channel",
+    "images": [
+      "/building-materials/gypsum_and_partitioning/Ceiling Channel.png"
+    ],
+    "subcategory": "Gypsum & Partitioning Solutions"
+  },
+  {
+    "id": 55,
+    "name": "W Angle",
+    "images": [
+      "/building-materials/gypsum_and_partitioning/W Angle.png"
+    ],
+    "subcategory": "Gypsum & Partitioning Solutions"
+  },
+  {
+    "id": 56,
+    "name": "Cement Board",
+    "images": [
+      "/building-materials/gypsum_and_partitioning/Cement Board.png"
+    ],
+    "subcategory": "Gypsum & Partitioning Solutions"
+  },
+  {
+    "id": 57,
+    "name": "Self Drilling & Dry Wall Screw",
+    "images": [
+      "/building-materials/gypsum_and_partitioning/Self Drilling & Dry Wall Screw.png"
+    ],
+    "subcategory": "Gypsum & Partitioning Solutions"
+  },
+  {
+    "id": 58,
+    "name": "Access Panel",
+    "images": [
+      "/building-materials/gypsum_and_partitioning/Access Panel.png"
+    ],
+    "subcategory": "Gypsum & Partitioning Solutions"
+  },
+  {
+    "id": 59,
+    "name": "Furring Channel",
+    "images": [
+      "/building-materials/gypsum_and_partitioning/Furring Channel.png"
+    ],
+    "subcategory": "Gypsum & Partitioning Solutions"
+  },
+  {
+    "id": 60,
+    "name": "Stud & Runner",
+    "images": [
+      "/building-materials/gypsum_and_partitioning/Stud & Runner.png"
+    ],
+    "subcategory": "Gypsum & Partitioning Solutions"
+  },
+  {
+    "id": 61,
+    "name": "Wall Angle",
+    "images": [
+      "/building-materials/gypsum_and_partitioning/Wall Angle.png"
+    ],
+    "subcategory": "Gypsum & Partitioning Solutions"
+  },
+  {
+    "id": 62,
+    "name": "Joint Tape",
+    "images": [
+      "/building-materials/gypsum_and_partitioning/Joint Tape.png"
+    ],
+    "subcategory": "Gypsum & Partitioning Solutions"
+  },
+  {
+    "id": 63,
+    "name": "Joint Bond",
+    "images": [
+      "/building-materials/gypsum_and_partitioning/Joint Bond.png"
+    ],
+    "subcategory": "Gypsum & Partitioning Solutions"
+  },
+  {
+    "id": 64,
+    "name": "Rod Hanger",
+    "images": [
+      "/building-materials/gypsum_and_partitioning/Rod Hanger.png"
+    ],
+    "subcategory": "Gypsum & Partitioning Solutions"
+  },
+  {
+    "id": 65,
+    "name": "Connecting Clip",
+    "images": [
+      "/building-materials/gypsum_and_partitioning/Connecting Clip.png"
+    ],
+    "subcategory": "Gypsum & Partitioning Solutions"
+  },
+  {
+    "id": 66,
+    "name": "Toilet Partitions",
+    "images": [
+      "/building-materials/architectural_engineering/Toilet Partitions.png"
+    ],
+    "subcategory": "Architectural Engineering Solutions"
+  },
+  {
+    "id": 67,
+    "name": "Expansion Joint Cover",
+    "images": [
+      "/building-materials/architectural_engineering/Expansion Joint Cover.png"
+    ],
+    "subcategory": "Architectural Engineering Solutions"
+  },
+  {
+    "id": 68,
+    "name": "Stair Nosing",
+    "images": [
+      "/building-materials/architectural_engineering/Stair Nosing.png"
+    ],
+    "subcategory": "Architectural Engineering Solutions"
+  },
+  {
+    "id": 69,
+    "name": "Tile Trim",
+    "images": [
+      "/building-materials/architectural_engineering/Tile Trim.png"
+    ],
+    "subcategory": "Architectural Engineering Solutions"
+  },
+  {
+    "id": 70,
+    "name": "Entrance Floor Mat",
+    "images": [
+      "/building-materials/architectural_engineering/Entrance Floor Mat.png"
+    ],
+    "subcategory": "Architectural Engineering Solutions"
+  },
+  {
+    "id": 71,
+    "name": "Wall Guard",
+    "images": [
+      "/building-materials/architectural_engineering/Wall Guard.png"
+    ],
+    "subcategory": "Architectural Engineering Solutions"
+  },
+  {
+    "id": 72,
+    "name": "Speed Humps",
+    "images": [
+      "/building-materials/architectural_engineering/Speed Humps.png"
+    ],
+    "subcategory": "Architectural Engineering Solutions"
+  },
+  {
+    "id": 73,
+    "name": "Wheel Stopper",
+    "images": [
+      "/building-materials/architectural_engineering/Wheel Stopper.png"
+    ],
+    "subcategory": "Architectural Engineering Solutions"
+  },
+  {
+    "id": 74,
+    "name": "Corner Guard",
+    "images": [
+      "/building-materials/architectural_engineering/Corner Guard.png"
+    ],
+    "subcategory": "Architectural Engineering Solutions"
+  },
+  {
+    "id": 75,
+    "name": "Cable Tray",
+    "images": [
+      "/building-materials/cable_management/Cable Tray.png"
+    ],
+    "subcategory": "Cable Management System"
+  },
+  {
+    "id": 76,
+    "name": "Cable Ladder",
+    "images": [
+      "/building-materials/cable_management/Cable Ladder.png"
+    ],
+    "subcategory": "Cable Management System"
+  },
+  {
+    "id": 77,
+    "name": "Basket Tray",
+    "images": [
+      "/building-materials/cable_management/Basket Tray.png"
+    ],
+    "subcategory": "Cable Management System"
+  },
+  {
+    "id": 78,
+    "name": "Cable Trunking",
+    "images": [
+      "/building-materials/cable_management/Cable Trunking.png"
+    ],
+    "subcategory": "Cable Management System"
+  },
+  {
+    "id": 79,
+    "name": "C-Channel",
+    "images": [
+      "/building-materials/cable_management/C-Channel.png"
+    ],
+    "subcategory": "Cable Management System"
+  },
+  {
+    "id": 80,
+    "name": "Cantilever Arm",
+    "images": [
+      "/building-materials/cable_management/Cantilever Arm.png"
+    ],
+    "subcategory": "Cable Management System"
+  },
+  {
+    "id": 81,
+    "name": "Beam Clamp",
+    "images": [
+      "/building-materials/cable_management/Beam Clamp.png"
+    ],
+    "subcategory": "Cable Management System"
+  },
+  {
+    "id": 82,
+    "name": "Threaded Rod",
+    "images": [
+      "/building-materials/cable_management/Threaded Rod.png"
+    ],
+    "subcategory": "Cable Management System"
+  },
+  {
+    "id": 83,
+    "name": "Base Plate",
+    "images": [
+      "/building-materials/cable_management/Base Plate.png"
+    ],
+    "subcategory": "Cable Management System"
+  },
+  {
+    "id": 84,
+    "name": "Earthing Jumper",
+    "images": [
+      "/building-materials/cable_management/Earthing Jumper.png"
+    ],
+    "subcategory": "Cable Management System"
+  },
+  {
+    "id": 85,
+    "name": "Drop in Anchor",
+    "images": [
+      "/building-materials/cable_management/Drop in Anchor.png"
+    ],
+    "subcategory": "Cable Management System"
+  },
+  {
+    "id": 86,
+    "name": "Bolt & Nut Washer",
+    "images": [
+      "/building-materials/cable_management/Bolt & Nut Washer.png"
+    ],
+    "subcategory": "Cable Management System"
+  }
+]

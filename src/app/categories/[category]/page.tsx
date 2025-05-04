@@ -107,7 +107,7 @@ export default function ProductsListPage() {
           variants={container}
           initial="hidden"
           animate="show"
-          className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8"
+          className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8"
         >
           {filteredProducts.map((product: Product) => (
             <motion.div key={product.id} variants={item} className="group">
@@ -127,7 +127,7 @@ export default function ProductsListPage() {
                 >
                   <div className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
                     {/* Product Image */}
-                    <div className="relative h-64 overflow-hidden">
+                    <div className="relative h-38 overflow-hidden">
                       <motion.img
                         src={product.images[0]}
                         alt={product.name}
@@ -139,8 +139,8 @@ export default function ProductsListPage() {
                     </div>
 
                     {/* Product Info */}
-                    <div className="p-6">
-                      <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                    <div className="p-3">
+                      <h3 className="text-l font-semibold text-gray-900 mb-2">
                         {product.name}
                       </h3>
                       {product.specs && (
@@ -161,7 +161,7 @@ export default function ProductsListPage() {
               ) : (
                 <div className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
                   {/* Product Image */}
-                  <div className="relative h-64 overflow-hidden">
+                  <div className="relative h-38 overflow-hidden">
                     <motion.img
                       src={product.images[0]}
                       alt={product.name}
@@ -173,8 +173,8 @@ export default function ProductsListPage() {
                   </div>
 
                   {/* Product Info */}
-                  <div className="p-6">
-                    <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                  <div className="p-3">
+                    <h3 className="text-l font-semibold text-gray-900 mb-2">
                       {product.name}
                     </h3>
                     {product.specs && (
