@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { useParams, useSearchParams } from "next/navigation";
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { ChevronLeft } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
@@ -46,11 +46,15 @@ export default function ProductPage() {
   const name = searchParams.get("name");
   const images = JSON.parse(searchParams.get("images") || "[]");
   const subcategory = searchParams.get("subcategory");
+  const description = searchParams.get("description") || "";
   const specs = searchParams.get("specs")
     ? JSON.parse(searchParams.get("specs")!)
     : {};
 
   const [selectedImage, setSelectedImage] = useState(0);
+  const [zoom, setZoom] = useState(false);
+  const [zoomPos, setZoomPos] = useState({ x: 0, y: 0 });
+  const imgContainerRef = useRef<HTMLDivElement>(null);
 
   if (!name || !images?.length) {
     return <div>Product not found</div>;
@@ -92,13 +96,41 @@ export default function ProductPage() {
               variants={item}
               className="relative aspect-square rounded-xl overflow-hidden bg-white shadow-lg"
             >
-              <Image
-                src={images[selectedImage] || ""}
-                alt={name}
-                fill
-                unoptimized
-                className="object-contain"
-              />
+              <div
+                ref={imgContainerRef}
+                className="w-full h-full relative"
+                onMouseEnter={() => setZoom(true)}
+                onMouseLeave={() => setZoom(false)}
+                onMouseMove={(e) => {
+                  const rect = imgContainerRef.current?.getBoundingClientRect();
+                  if (!rect) return;
+                  const x = ((e.clientX - rect.left) / rect.width) * 100;
+                  const y = ((e.clientY - rect.top) / rect.height) * 100;
+                  setZoomPos({ x, y });
+                }}
+                style={{ cursor: zoom ? "zoom-out" : "zoom-in" }}
+              >
+                <Image
+                  src={images[selectedImage] || ""}
+                  alt={name}
+                  fill
+                  unoptimized
+                  className="object-contain select-none pointer-events-none"
+                  draggable={false}
+                />
+                {zoom && (
+                  <div
+                    className="hidden md:block absolute inset-0 pointer-events-none z-20 rounded-xl border-2 border-blue-400"
+                    style={{
+                      backgroundImage: `url(${images[selectedImage]})`,
+                      backgroundRepeat: "no-repeat",
+                      backgroundPosition: `${zoomPos.x}% ${zoomPos.y}%`,
+                      backgroundSize: "125% 125%",
+                      opacity: 1,
+                    }}
+                  />
+                )}
+              </div>
             </motion.div>
 
             <motion.div
@@ -141,17 +173,14 @@ export default function ProductPage() {
               <p className="text-lg text-gray-600">{subcategory}</p>
             </motion.div>
 
-            <motion.div variants={item} className="prose max-w-none">
-              <h2 className="text-2xl font-semibold text-gray-900 mb-4">
-                Product Description
-              </h2>
-              <p className="text-gray-600">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat.
-              </p>
-            </motion.div>
+            {description && (
+              <motion.div variants={item} className="prose max-w-none">
+                <h2 className="text-2xl font-semibold text-gray-900 mb-4">
+                  Product Description
+                </h2>
+                <p className="text-gray-600">{description}</p>
+              </motion.div>
+            )}
 
             {Object.keys(specs).length > 0 && (
               <motion.div variants={item}>
@@ -181,9 +210,6 @@ export default function ProductPage() {
               className="flex flex-col sm:flex-row gap-4 pt-6"
             >
               <button className="px-8 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">
-                Request Quote
-              </button>
-              <button className="px-8 py-3 bg-gray-100 text-gray-900 rounded-lg hover:bg-gray-200 transition-colors">
                 Contact Sales
               </button>
             </motion.div>

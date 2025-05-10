@@ -1,6 +1,7 @@
 import buildingMaterials from "./buildingMaterials.json";
+import fireSafety from "./fire-safety.json";
 interface ProductSpecs {
-  [key: string]: string;
+  [key: string]: string | undefined;
 }
 
 export interface Product {
@@ -9,6 +10,7 @@ export interface Product {
   images: string[];
   subcategory: string;
   specs?: ProductSpecs;
+  description?: string;
 }
 
 interface CategoryData {
@@ -40,61 +42,14 @@ export const categoryData: Record<string, CategoryData> = {
     title: "Fire Safety Equipment",
     description:
       "Protect your premises with our certified fire safety products",
-    subcategories: ["All"],
-    products: [
-      {
-        id: 1,
-        name: "Rigid Coupling",
-        images: [
-          "/fire-safety/rigid-coupling/rigid-coupling_1.png",
-          "/fire-safety/rigid-coupling/rigid-coupling_2.png",
-          "/fire-safety/rigid-coupling/rigid-coupling_3.png",
-        ],
-        subcategory: "Ductile Iron Grooved Fittings and Couplings",
-        specs: {
-          type: "XGTQ1",
-        },
-      },
-      {
-        id: 2,
-        name: "Flexible Coupling",
-        images: [
-          "/fire-safety/flexible-coupling/flexible-coupling_1.png",
-          "/fire-safety/flexible-coupling/flexible-coupling_2.png",
-          "/fire-safety/flexible-coupling/flexible-coupling_3.png",
-        ],
-        subcategory: "Ductile Iron Grooved Fittings and Couplings",
-        specs: {
-          type: "XGTQ2",
-        },
-      },
-      {
-        id: 3,
-        name: "Angle Coupling",
-        images: [
-          "/fire-safety/angle-coupling/angle-coupling_1.png",
-          "/fire-safety/angle-coupling/angle-coupling_2.png",
-          "/fire-safety/angle-coupling/angle-coupling_3.png",
-        ],
-        subcategory: "Ductile Iron Grooved Fittings and Couplings",
-      },
-      {
-        id: 4,
-        name: "90 Elbow",
-        images: [
-          "/fire-safety/90-elbow/90-elbow_1.png",
-          "/fire-safety/90-elbow/90-elbow_2.png",
-          "/fire-safety/90-elbow/90-elbow_3.png",
-          "/fire-safety/90-elbow/90-elbow_4.png",
-          "/fire-safety/90-elbow/90-elbow_5.png",
-        ],
-        subcategory: "Ductile Iron Grooved Fittings and Couplings",
-        specs: {
-          type: "XGQT01",
-          size: "Short, Standard",
-        },
-      },
+    subcategories: [
+      "All",
+      "Ductile Iron Grooved Fittings and Couplings",
+      "Malleable Iron Pipe Fittings",
+      "Pipe Fittings",
+      "Other Products",
     ],
+    products: fireSafety,
     color: "red",
   },
   scaffolding: {

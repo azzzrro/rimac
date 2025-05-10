@@ -19,6 +19,7 @@ import {
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
+import Image from "next/image";
 
 const HomeNavbar = () => {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
@@ -75,7 +76,13 @@ const HomeNavbar = () => {
         />
         <NavbarBrand>
           <Link href="/" className="font-bold text-inherit">
-            RIMAC
+            <Image
+              src="/RIMAC_GOLD_TITLE.png"
+              alt="RIMAC"
+              width={100}
+              height={100}
+              className="w-auto h-5"
+            />
           </Link>
         </NavbarBrand>
       </NavbarContent>

@@ -5,6 +5,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import { Mail, Phone, MapPin } from "lucide-react";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 const HomeFooter = () => {
   return (
@@ -18,27 +19,30 @@ const HomeFooter = () => {
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12">
         {/* Left Side - Company Info */}
         <div className="space-y-6">
-          <h2 className="text-2xl font-bold">
-            RIYADH INFRASTRUCTURE MATERIALS AND CONTRACTING CO
-          </h2>
-
+          <Image
+            src="/full_logo.png"
+            alt="RIMAC"
+            width={100}
+            height={100}
+            className="w-auto h-44 mb-0"
+          />
           <div className="flex items-start space-x-3">
             <MapPin className="w-5 h-5 mt-1 text-blue-400" />
-            <p>123 King Fahad Road, Riyadh, Saudi Arabia</p>
+            <p>King Abdulaziz Road, Riyadh, Saudi Arabia</p>
           </div>
 
           <div className="flex items-start space-x-3">
             <Phone className="w-5 h-5 mt-1 text-blue-400" />
-            <p>+966 1234 5678</p>
+            <p>0510800918</p>
           </div>
 
           <div className="flex items-start space-x-3">
             <Mail className="w-5 h-5 mt-1 text-blue-400" />
-            <p>info@rimcconstruction.com</p>
+            <p>info@rimac.co</p>
           </div>
 
           <p className="text-gray-400 text-sm mt-6">
-            © {new Date().getFullYear()} RIMC Construction. All rights reserved.
+            © {new Date().getFullYear()} RIMAC All rights reserved.
           </p>
         </div>
 
