@@ -134,19 +134,6 @@
   },
   {
     "id": 11,
-    "name": "Reducing Tee (Grooved)",
-    "images": [
-      "/fire-safety/reducing-tee-grooved-2/reducing-tee-grooved-2-1.png",
-      "/fire-safety/reducing-tee-grooved-2/reducing-tee-grooved-2-2.png",
-      "/fire-safety/reducing-tee-grooved-2/reducing-tee-grooved-2-3.png"
-    ],
-    "subcategory": "Ductile Iron Grooved Fittings and Couplings",
-    "specs": {
-      "Type": "XGQT04"
-    }
-  },
-  {
-    "id": 12,
     "name": "Reducing Tee (Threaded)",
     "images": [
       "/fire-safety/reducing-tee-threaded/reducing-tee-threaded-1.png",
@@ -159,7 +146,7 @@
     }
   },
   {
-    "id": 13,
+    "id": 12,
     "name": "Reducing Cross (Grooved)",
     "images": [
       "/fire-safety/reducing-cross-grooved/reducing-cross-grooved-1.png",
@@ -172,7 +159,7 @@
     }
   },
   {
-    "id": 14,
+    "id": 13,
     "name": "Reducing Cross (Grooved)",
     "images": [
       "/fire-safety/reducing-cross-grooved-2/reducing-cross-grooved-2-1.png",
@@ -185,7 +172,7 @@
     }
   },
   {
-    "id": 15,
+    "id": 14,
     "name": "Reducing Cross (Threaded)",
     "images": [
       "/fire-safety/reducing-cross-threaded/reducing-cross-threaded-1.png",
@@ -198,7 +185,7 @@
     }
   },
   {
-    "id": 16,
+    "id": 15,
     "name": "Reducing Cross (Threaded)",
     "images": [
       "/fire-safety/reducing-cross-threaded-2/reducing-cross-threaded-2-1.png",
@@ -211,7 +198,7 @@
     }
   },
   {
-    "id": 17,
+    "id": 16,
     "name": "Mechanical Tee (Grooved)",
     "images": [
       "/fire-safety/mechanical-tee-grooved/mechanical-tee-grooved-1.png",
@@ -225,7 +212,7 @@
     }
   },
   {
-    "id": 18,
+    "id": 17,
     "name": "Mechanical Tee (Grooved)",
     "images": [
       "/fire-safety/mechanical-tee-grooved-2/mechanical-tee-grooved-2-1.png",
@@ -239,7 +226,7 @@
     }
   },
   {
-    "id": 19,
+    "id": 18,
     "name": "Mechanical Tee (Threaded)",
     "images": [
       "/fire-safety/mechanical-tee-threaded/mechanical-tee-threaded-1.png",
@@ -253,7 +240,7 @@
     }
   },
   {
-    "id": 20,
+    "id": 19,
     "name": "Mechanical Tee (Threaded)",
     "images": [
       "/fire-safety/mechanical-tee-threaded-2/mechanical-tee-threaded-2-1.png",
@@ -267,7 +254,7 @@
     }
   },
   {
-    "id": 21,
+    "id": 20,
     "name": "U-Bolted Mechanical Tee (Threaded)",
     "images": [
       "/fire-safety/u-bolted-mechanical-tee-threaded/u-bolted-mechanical-tee-threaded-1.png",
@@ -280,7 +267,7 @@
     }
   },
   {
-    "id": 22,
+    "id": 21,
     "name": "Flange Adapter PN16",
     "images": [
       "/fire-safety/flange-adapter-pn16/flange-adapter-pn16-1.png",
@@ -293,7 +280,7 @@
     }
   },
   {
-    "id": 23,
+    "id": 22,
     "name": "Flange Adapter (Threaded)",
     "images": [
       "/fire-safety/flange-adapter-threaded/flange-adapter-threaded-1.png",
@@ -306,7 +293,7 @@
     }
   },
   {
-    "id": 24,
+    "id": 23,
     "name": "Adapter Flange PN25",
     "images": [
       "/fire-safety/adapter-flange-pn25/adapter-flange-pn25-1.png",
@@ -316,7 +303,7 @@
     "subcategory": "Ductile Iron Grooved Fittings and Couplings"
   },
   {
-    "id": 25,
+    "id": 24,
     "name": "Grooved Flange PN16",
     "images": [
       "/fire-safety/grooved-flange-pn16/grooved-flange-pn16-1.png",
@@ -329,7 +316,7 @@
     }
   },
   {
-    "id": 26,
+    "id": 25,
     "name": "Grooved Flange PN25",
     "images": [
       "/fire-safety/grooved-flange-pn25/grooved-flange-pn25-1.png",
@@ -339,7 +326,7 @@
     "subcategory": "Ductile Iron Grooved Fittings and Couplings"
   },
   {
-    "id": 27,
+    "id": 26,
     "name": "Flange Adapter ANSI",
     "images": [
       "/fire-safety/flange-adapter-ansi/flange-adapter-ansi-1.png",
@@ -353,7 +340,7 @@
     }
   },
   {
-    "id": 28,
+    "id": 27,
     "name": "Grooved Flange ANSI",
     "images": [
       "/fire-safety/grooved-flange-ansi/grooved-flange-ansi-1.png",
@@ -367,7 +354,7 @@
     }
   },
   {
-    "id": 29,
+    "id": 28,
     "name": "Reducing Flexible Coupling",
     "images": [
       "/fire-safety/reducing-flexible-coupling/reducing-flexible-coupling-1.png",
@@ -377,7 +364,7 @@
     "subcategory": "Ductile Iron Grooved Fittings and Couplings"
   },
   {
-    "id": 30,
+    "id": 29,
     "name": "Concentric Reducer (Grooved)",
     "images": [
       "/fire-safety/concentric-reducer-grooved/concentric-reducer-grooved-1.png",
@@ -391,7 +378,7 @@
     }
   },
   {
-    "id": 31,
+    "id": 30,
     "name": "Concentric Reducer (Grooved) 2",
     "images": [
       "/fire-safety/concentric-reducer-grooved-2/concentric-reducer-grooved-2-1.png",
@@ -405,7 +392,7 @@
     }
   },
   {
-    "id": 32,
+    "id": 31,
     "name": "Concentric Reducer (Threaded)",
     "images": [
       "/fire-safety/concentric-reducer-threaded/concentric-reducer-threaded-1.png",
@@ -419,7 +406,7 @@
     }
   },
   {
-    "id": 33,
+    "id": 32,
     "name": "Eccentric Reducer (Grooved)",
     "images": [
       "/fire-safety/eccentric-reducer-grooved/eccentric-reducer-grooved-1.png",
@@ -433,7 +420,7 @@
     }
   },
   {
-    "id": 34,
+    "id": 33,
     "name": "Cap",
     "images": [
       "/fire-safety/cap/cap-1.png",
@@ -446,7 +433,7 @@
     }
   },
   {
-    "id": 35,
+    "id": 34,
     "name": "Shouldered Coupling",
     "images": [
       "/fire-safety/shouldered-coupling/shouldered-coupling-1.png",
@@ -455,7 +442,7 @@
     "subcategory": "Ductile Iron Grooved Fittings and Couplings"
   },
   {
-    "id": 36,
+    "id": 35,
     "name": "Cap with Eccentric Hole",
     "images": [
       "/fire-safety/cap-with-eccentric-hole/cap-with-eccentric-hole-1.png",
@@ -466,7 +453,7 @@
     "subcategory": "Ductile Iron Grooved Fittings and Couplings"
   },
   {
-    "id": 37,
+    "id": 36,
     "name": "Roll Groove Diamension Standard",
     "images": [
       "/fire-safety/roll-groove-diamension-standard/roll-groove-diamension-standard-1.png",
@@ -476,7 +463,7 @@
     "subcategory": "Ductile Iron Grooved Fittings and Couplings"
   },
   {
-    "id": 38,
+    "id": 37,
     "name": "Gasket Ring",
     "images": [
       "/fire-safety/gasket-ring/gasket-ring-1.png",
@@ -486,7 +473,7 @@
     "subcategory": "Ductile Iron Grooved Fittings and Couplings"
   },
   {
-    "id": 39,
+    "id": 38,
     "name": "Bolts and Nuts",
     "images": [
       "/fire-safety/bolts-and-nuts/bolts-and-nuts-1.png",
@@ -496,7 +483,7 @@
     "description": "Raw material of bolts and nuts are taken as 40 cr or 35# steel, and its mechanical properties should reach Gr.8.8 after hot-treatment. Only one wrench will be used during the installation, safely and firmly."
   },
   {
-    "id": 40,
+    "id": 39,
     "name": "Roll Grooving Machine",
     "images": [
       "/fire-safety/roll-grooving-machine/roll-grooving-machine-1.png"
@@ -504,25 +491,25 @@
     "subcategory": "Other Products"
   },
   {
-    "id": 41,
+    "id": 40,
     "name": "Hole Cutting Machine",
     "images": ["/fire-safety/hole-cutting-machine/hole-cutting-machine-1.png"],
     "subcategory": "Other Products"
   },
   {
-    "id": 42,
+    "id": 41,
     "name": "Pipe Cutting Machine",
     "images": ["/fire-safety/pipe-cutting-machine/pipe-cutting-machine-1.png"],
     "subcategory": "Other Products"
   },
   {
-    "id": 43,
+    "id": 42,
     "name": "Lube",
     "images": ["/fire-safety/lube/lube-1.png"],
     "subcategory": "Other Products"
   },
   {
-    "id": 44,
+    "id": 43,
     "name": "90° Elbow",
     "images": [
       "/fire-safety/90-elbow-2/90-elbow-2-1.png",
@@ -536,7 +523,7 @@
     }
   },
   {
-    "id": 45,
+    "id": 44,
     "name": "90° M&F Elbow",
     "images": [
       "/fire-safety/90-m-f-elbow/90-m-f-elbow-1.png",
@@ -550,7 +537,7 @@
     }
   },
   {
-    "id": 46,
+    "id": 45,
     "name": "90° Elbow Reducing",
     "images": [
       "/fire-safety/90-elbow-reducing/90-elbow-reducing-1.png",
@@ -564,7 +551,7 @@
     }
   },
   {
-    "id": 47,
+    "id": 46,
     "name": "45° Elbow",
     "images": [
       "/fire-safety/45-elbow-2/45-elbow-2-1.png",
@@ -575,7 +562,7 @@
     "subcategory": "Malleable Iron Pipe Fittings"
   },
   {
-    "id": 48,
+    "id": 47,
     "name": "90° Female Long Sweep Bends",
     "images": [
       "/fire-safety/90-female-long-sweep-bends/90-female-long-sweep-bends-1.png",
@@ -586,7 +573,7 @@
     "subcategory": "Malleable Iron Pipe Fittings"
   },
   {
-    "id": 49,
+    "id": 48,
     "name": "90° Degree M&F Long Sweep Bends",
     "images": [
       "/fire-safety/90-degree-m-f-long-sweep-bends/90-degree-m-f-long-sweep-bends-1.png",
@@ -597,7 +584,7 @@
     "subcategory": "Malleable Iron Pipe Fittings"
   },
   {
-    "id": 50,
+    "id": 49,
     "name": "45° M&F Long Sweep Bends",
     "images": [
       "/fire-safety/45-degree-m-f-long-sweep-bends/45-degree-m-f-long-sweep-bends-1.png",
@@ -607,7 +594,7 @@
     "subcategory": "Malleable Iron Pipe Fittings"
   },
   {
-    "id": 51,
+    "id": 50,
     "name": "45° Female Long Sweep Bends",
     "images": [
       "/fire-safety/45-female-long-sweep-bends/45-female-long-sweep-bends-1.png",
@@ -617,7 +604,7 @@
     "subcategory": "Malleable Iron Pipe Fittings"
   },
   {
-    "id": 52,
+    "id": 51,
     "name": "Entire Thread Sockets",
     "images": [
       "/fire-safety/entire-thread-sockets/entire-thread-sockets-1.png",
@@ -628,7 +615,7 @@
     "subcategory": "Malleable Iron Pipe Fittings"
   },
   {
-    "id": 53,
+    "id": 52,
     "name": "Part Thread Sockets",
     "images": [
       "/fire-safety/part-thread-sockets/part-thread-sockets-1.png",
@@ -639,7 +626,7 @@
     "subcategory": "Malleable Iron Pipe Fittings"
   },
   {
-    "id": 54,
+    "id": 53,
     "name": "Socket Reducing",
     "images": [
       "/fire-safety/socket-reducing/socket-reducing-1.png",
@@ -652,7 +639,7 @@
     }
   },
   {
-    "id": 55,
+    "id": 54,
     "name": "Sockets",
     "images": [
       "/fire-safety/sockets/sockets-1.png",
@@ -666,7 +653,7 @@
     }
   },
   {
-    "id": 56,
+    "id": 55,
     "name": "Socket M&F",
     "images": [
       "/fire-safety/socket-m-f/socket-m-f-1.png",
@@ -680,7 +667,7 @@
     }
   },
   {
-    "id": 57,
+    "id": 56,
     "name": "Hexagon Nipples",
     "images": [
       "/fire-safety/hexagon-nipples/hexagon-nipples-1.png",
@@ -691,7 +678,7 @@
     "subcategory": "Malleable Iron Pipe Fittings"
   },
   {
-    "id": 58,
+    "id": 57,
     "name": "Nipples",
     "images": [
       "/fire-safety/nipples/nipples-1.png",
@@ -705,7 +692,7 @@
     }
   },
   {
-    "id": 59,
+    "id": 58,
     "name": "Tee Reducing",
     "images": [
       "/fire-safety/tee-reducing/tee-reducing-1.png",
@@ -719,7 +706,7 @@
     }
   },
   {
-    "id": 60,
+    "id": 59,
     "name": "Tee Equal",
     "images": [
       "/fire-safety/tee-equal/tee-equal-1.png",
@@ -733,7 +720,7 @@
     }
   },
   {
-    "id": 61,
+    "id": 60,
     "name": "Tees Reducing",
     "images": [
       "/fire-safety/tees-reducing/tees-reducing-1.png",
@@ -747,7 +734,7 @@
     }
   },
   {
-    "id": 62,
+    "id": 61,
     "name": "Lateral Y Branch 45° Tee",
     "images": [
       "/fire-safety/lateral-y-branch-45-tee/lateral-y-branch-45-tee-1.png",
@@ -757,7 +744,7 @@
     "subcategory": "Malleable Iron Pipe Fittings"
   },
   {
-    "id": 63,
+    "id": 62,
     "name": "Cross Female",
     "images": [
       "/fire-safety/cross-female/cross-female-1.png",
@@ -768,7 +755,7 @@
     "subcategory": "Malleable Iron Pipe Fittings"
   },
   {
-    "id": 64,
+    "id": 63,
     "name": "Cross Female Reducing",
     "images": [
       "/fire-safety/cross-female-reducing/cross-female-reducing-1.png",
@@ -782,7 +769,7 @@
     }
   },
   {
-    "id": 65,
+    "id": 64,
     "name": "Union Flat Seat",
     "images": [
       "/fire-safety/union-flat-seat/union-flat-seat-1.png",
@@ -793,7 +780,7 @@
     "subcategory": "Malleable Iron Pipe Fittings"
   },
   {
-    "id": 66,
+    "id": 65,
     "name": "Union Flat Seat",
     "images": [
       "/fire-safety/union-flat-seat-m-f/union-flat-seat-m-f-1.png",
@@ -807,7 +794,7 @@
     }
   },
   {
-    "id": 67,
+    "id": 66,
     "name": "Union Taper Seat",
     "images": [
       "/fire-safety/union-taper-seat/union-taper-seat-1.png",
@@ -821,7 +808,7 @@
     }
   },
   {
-    "id": 68,
+    "id": 67,
     "name": "Brass Unions",
     "images": [
       "/fire-safety/brass-unions/brass-unions-1.png",
@@ -835,7 +822,7 @@
     }
   },
   {
-    "id": 69,
+    "id": 68,
     "name": "Union Taper Seat M&F",
     "images": [
       "/fire-safety/union-taper-seat-m-f/union-taper-seat-m-f-1.png",
@@ -849,7 +836,7 @@
     }
   },
   {
-    "id": 70,
+    "id": 69,
     "name": "Union Flat Seat M&F",
     "images": [
       "/fire-safety/union-flat-seat-m-f/union-flat-seat-m-f-1.png",
@@ -863,7 +850,7 @@
     }
   },
   {
-    "id": 71,
+    "id": 70,
     "name": "Union Taper Seat M&F",
     "images": [
       "/fire-safety/union-taper-seat-m-f/union-taper-seat-m-f-1.png",
@@ -877,7 +864,7 @@
     }
   },
   {
-    "id": 72,
+    "id": 71,
     "name": "Union Elbow Flat Seat Female",
     "images": [
       "/fire-safety/union-elbow-flat-seat-female/union-elbow-flat-seat-female-1.png",
@@ -890,7 +877,7 @@
     }
   },
   {
-    "id": 73,
+    "id": 72,
     "name": "Union Taper Seat M&F",
     "images": [
       "/fire-safety/union-taper-seat-m-f-2/union-taper-seat-m-f-2-1.png",
@@ -903,7 +890,7 @@
     }
   },
   {
-    "id": 74,
+    "id": 73,
     "name": "Bushings",
     "images": [
       "/fire-safety/bushings/bushings-1.png",
@@ -914,7 +901,7 @@
     "subcategory": "Malleable Iron Pipe Fittings"
   },
   {
-    "id": 75,
+    "id": 74,
     "name": "Beaded Plug",
     "images": [
       "/fire-safety/beaded-plug/beaded-plug-1.png",
@@ -924,7 +911,7 @@
     "subcategory": "Malleable Iron Pipe Fittings"
   },
   {
-    "id": 76,
+    "id": 75,
     "name": "Plain Plug",
     "images": [
       "/fire-safety/plain-plug/plain-plug-1.png",
@@ -935,7 +922,7 @@
     "subcategory": "Malleable Iron Pipe Fittings"
   },
   {
-    "id": 77,
+    "id": 76,
     "name": "Caps",
     "images": [
       "/fire-safety/caps/caps-1.png",
@@ -946,7 +933,7 @@
     "subcategory": "Malleable Iron Pipe Fittings"
   },
   {
-    "id": 78,
+    "id": 77,
     "name": "Round Caps",
     "images": [
       "/fire-safety/round-caps/round-caps-1.png",
@@ -957,7 +944,7 @@
     "subcategory": "Malleable Iron Pipe Fittings"
   },
   {
-    "id": 79,
+    "id": 78,
     "name": "Round Flange Without Bolt Hole",
     "images": [
       "/fire-safety/round-flange-without-bolt-hole/round-flange-without-bolt-hole-1.png",
@@ -968,7 +955,7 @@
     "subcategory": "Malleable Iron Pipe Fittings"
   },
   {
-    "id": 80,
+    "id": 79,
     "name": "Round Flange",
     "images": [
       "/fire-safety/round-flange/round-flange-1.png",
@@ -979,7 +966,7 @@
     "subcategory": "Malleable Iron Pipe Fittings"
   },
   {
-    "id": 81,
+    "id": 80,
     "name": "Round Flange with 4 holes",
     "images": [
       "/fire-safety/round-flange-with-4-holes/round-flange-with-4-holes-1.png",
@@ -990,7 +977,7 @@
     "subcategory": "Malleable Iron Pipe Fittings"
   },
   {
-    "id": 82,
+    "id": 81,
     "name": "Crossover",
     "images": [
       "/fire-safety/crossover/crossover-1.png",
@@ -1000,7 +987,7 @@
     "subcategory": "Malleable Iron Pipe Fittings"
   },
   {
-    "id": 83,
+    "id": 82,
     "name": "Backnut",
     "images": [
       "/fire-safety/backnut/backnut-1.png",
@@ -1011,7 +998,7 @@
     "subcategory": "Malleable Iron Pipe Fittings"
   },
   {
-    "id": 84,
+    "id": 83,
     "name": "Side Outlet Elbow",
     "images": [
       "/fire-safety/side-outlet-elbow/side-outlet-elbow-1.png",
@@ -1022,7 +1009,7 @@
     "subcategory": "Malleable Iron Pipe Fittings"
   },
   {
-    "id": 85,
+    "id": 84,
     "name": "Wall Elbow",
     "images": [
       "/fire-safety/wall-elbow/wall-elbow-1.png",
@@ -1033,7 +1020,7 @@
     "subcategory": "Malleable Iron Pipe Fittings"
   },
   {
-    "id": 86,
+    "id": 85,
     "name": "Short Compression Coupling",
     "images": [
       "/fire-safety/short-compression-coupling/short-compression-coupling-1.png",
@@ -1043,8 +1030,8 @@
     "subcategory": "Malleable Iron Pipe Fittings"
   },
   {
-    "id": 87,
-    "name": "BENDS M&F 90°",
+    "id": 86,
+    "name": "Bends M&F 90°",
     "images": [
       "/fire-safety/bends-m-f-90/bends-m-f-90-1.png",
       "/fire-safety/bends-m-f-90/bends-m-f-90-2.png",
@@ -1056,8 +1043,8 @@
     }
   },
   {
-    "id": 88,
-    "name": "BENDS F 90°",
+    "id": 87,
+    "name": "Bends F 90°",
     "images": [
       "/fire-safety/bends-f-90/bends-f-90-1.png",
       "/fire-safety/bends-f-90/bends-f-90-2.png",
@@ -1069,8 +1056,8 @@
     }
   },
   {
-    "id": 89,
-    "name": "BENDS M&M 90°",
+    "id": 88,
+    "name": "Bends M&M 90°",
     "images": [
       "/fire-safety/bends-m-m-90/bends-m-m-90-1.png",
       "/fire-safety/bends-m-m-90/bends-m-m-90-2.png",
@@ -1082,8 +1069,8 @@
     }
   },
   {
-    "id": 90,
-    "name": "BENDS M&F 45°",
+    "id": 89,
+    "name": "Bends M&F 45°",
     "images": [
       "/fire-safety/bends-m-f-45/bends-m-f-45-1.png",
       "/fire-safety/bends-m-f-45/bends-m-f-45-2.png",
@@ -1095,8 +1082,8 @@
     }
   },
   {
-    "id": 91,
-    "name": "BENDS F 45°",
+    "id": 90,
+    "name": "Bends F 45°",
     "images": [
       "/fire-safety/bends-f-45/bends-f-45-1.png",
       "/fire-safety/bends-f-45/bends-f-45-2.png",
@@ -1108,7 +1095,7 @@
     }
   },
   {
-    "id": 92,
+    "id": 91,
     "name": "ELBOWS 90°",
     "images": [
       "/fire-safety/elbows-90/elbows-90-1.png",
@@ -1121,7 +1108,7 @@
     }
   },
   {
-    "id": 93,
+    "id": 92,
     "name": "RED. ELBOWS",
     "images": [
       "/fire-safety/red-elbows/red-elbows-1.png",
@@ -1131,8 +1118,8 @@
     "subcategory": "Pipe Fittings"
   },
   {
-    "id": 94,
-    "name": "STREET ELBOWS 90°",
+    "id": 93,
+    "name": "Street Elbows 90°",
     "images": [
       "/fire-safety/street-elbows-90/street-elbows-90-1.png",
       "/fire-safety/street-elbows-90/street-elbows-90-2.png",
@@ -1141,8 +1128,8 @@
     "subcategory": "Pipe Fittings"
   },
   {
-    "id": 95,
-    "name": "ELBOWS 45°",
+    "id": 94,
+    "name": "Elbows 45°",
     "images": [
       "/fire-safety/elbows-45/elbows-45-1.png",
       "/fire-safety/elbows-45/elbows-45-2.png",
@@ -1151,8 +1138,8 @@
     "subcategory": "Pipe Fittings"
   },
   {
-    "id": 96,
-    "name": "STREET ELBOWS 45°",
+    "id": 95,
+    "name": "Street Elbows 45°",
     "images": [
       "/fire-safety/street-elbows-45/street-elbows-45-1.png",
       "/fire-safety/street-elbows-45/street-elbows-45-2.png",
@@ -1161,8 +1148,8 @@
     "subcategory": "Pipe Fittings"
   },
   {
-    "id": 97,
-    "name": "RED. TEES",
+    "id": 96,
+    "name": "Red Tees",
     "images": [
       "/fire-safety/red-tees/red-tees-1.png",
       "/fire-safety/red-tees/red-tees-2.png",
@@ -1172,8 +1159,8 @@
     "subcategory": "Pipe Fittings"
   },
   {
-    "id": 98,
-    "name": "RED. TEES",
+    "id": 97,
+    "name": "Red Tees",
     "images": [
       "/fire-safety/red-tees-2/red-tees-2-1.png",
       "/fire-safety/red-tees-2/red-tees-2-2.png",
@@ -1183,8 +1170,8 @@
     "subcategory": "Pipe Fittings"
   },
   {
-    "id": 99,
-    "name": "BULL HEAD TEE",
+    "id": 98,
+    "name": "Bull Head Tee",
     "images": [
       "/fire-safety/bull-head-tee/bull-head-tee-1.png",
       "/fire-safety/bull-head-tee/bull-head-tee-2.png",
@@ -1193,8 +1180,8 @@
     "subcategory": "Pipe Fittings"
   },
   {
-    "id": 100,
-    "name": "TEES",
+    "id": 99,
+    "name": "Tees",
     "images": [
       "/fire-safety/tees/tees-1.png",
       "/fire-safety/tees/tees-2.png",
@@ -1203,8 +1190,8 @@
     "subcategory": "Pipe Fittings"
   },
   {
-    "id": 101,
-    "name": "STREET TEES",
+    "id": 100,
+    "name": "Street Tees",
     "images": [
       "/fire-safety/street-tees/street-tees-1.png",
       "/fire-safety/street-tees/street-tees-2.png",
@@ -1213,8 +1200,8 @@
     "subcategory": "Pipe Fittings"
   },
   {
-    "id": 102,
-    "name": "LATERAL Y BRANCH 45°",
+    "id": 101,
+    "name": "Lateral Y Branch 45°",
     "images": [
       "/fire-safety/lateral-y-branch-45/lateral-y-branch-45-1.png",
       "/fire-safety/lateral-y-branch-45/lateral-y-branch-45-2.png",
@@ -1223,8 +1210,8 @@
     "subcategory": "Pipe Fittings"
   },
   {
-    "id": 103,
-    "name": "CROSSES",
+    "id": 102,
+    "name": "Crosses",
     "images": [
       "/fire-safety/crosses/crosses-1.png",
       "/fire-safety/crosses/crosses-2.png",
@@ -1233,8 +1220,8 @@
     "subcategory": "Pipe Fittings"
   },
   {
-    "id": 104,
-    "name": "SIDE OUTLET ELBOWS",
+    "id": 103,
+    "name": "Side Outlet Elbows",
     "images": [
       "/fire-safety/side-outlet-elbows/side-outlet-elbows-1.png",
       "/fire-safety/side-outlet-elbows/side-outlet-elbows-2.png",
@@ -1243,8 +1230,8 @@
     "subcategory": "Pipe Fittings"
   },
   {
-    "id": 105,
-    "name": "SIDE OUTLET TEES",
+    "id": 104,
+    "name": "Side Outlet Tees",
     "images": [
       "/fire-safety/side-outlet-tees/side-outlet-tees-1.png",
       "/fire-safety/side-outlet-tees/side-outlet-tees-2.png",
@@ -1253,8 +1240,8 @@
     "subcategory": "Pipe Fittings"
   },
   {
-    "id": 106,
-    "name": "RED. COUPLING",
+    "id": 105,
+    "name": "Red Coupling",
     "images": [
       "/fire-safety/red-couplings/red-couplings-1.png",
       "/fire-safety/red-couplings/red-couplings-2.png",
@@ -1266,8 +1253,8 @@
     }
   },
   {
-    "id": 107,
-    "name": "BUSHINGS",
+    "id": 106,
+    "name": "Bushings",
     "images": [
       "/fire-safety/bushings-2/bushings-2-1.png",
       "/fire-safety/bushings-2/bushings-2-2.png",
@@ -1277,8 +1264,8 @@
     "subcategory": "Pipe Fittings"
   },
   {
-    "id": 108,
-    "name": "RED. HEX. NIPPLES",
+    "id": 107,
+    "name": "Red Hex Nipples",
     "images": [
       "/fire-safety/red-hex-nipples/red-hex-nipples-1.png",
       "/fire-safety/red-hex-nipples/red-hex-nipples-2.png",
@@ -1287,8 +1274,8 @@
     "subcategory": "Pipe Fittings"
   },
   {
-    "id": 109,
-    "name": "EXTENSION PIECES",
+    "id": 108,
+    "name": "Extension Pieces",
     "images": [
       "/fire-safety/extension-pieces/extension-pieces-1.png",
       "/fire-safety/extension-pieces/extension-pieces-2.png",
@@ -1297,8 +1284,8 @@
     "subcategory": "Pipe Fittings"
   },
   {
-    "id": 110,
-    "name": "COUPLINGS",
+    "id": 109,
+    "name": "Couplings",
     "images": [
       "/fire-safety/couplings/couplings-1.png",
       "/fire-safety/couplings/couplings-2.png",
@@ -1310,8 +1297,8 @@
     }
   },
   {
-    "id": 111,
-    "name": "HEXAGON NIPPLES",
+    "id": 110,
+    "name": "Hexagon Nipples",
     "images": [
       "/fire-safety/hexagon-nipples-2/hexagon-nipples-2-1.png",
       "/fire-safety/hexagon-nipples-2/hexagon-nipples-2-2.png",
@@ -1320,8 +1307,8 @@
     "subcategory": "Pipe Fittings"
   },
   {
-    "id": 112,
-    "name": "PLUGS",
+    "id": 111,
+    "name": "Plugs",
     "images": [
       "/fire-safety/plugs/plugs-1.png",
       "/fire-safety/plugs/plugs-2.png",
@@ -1330,8 +1317,8 @@
     "subcategory": "Pipe Fittings"
   },
   {
-    "id": 113,
-    "name": "CAPS",
+    "id": 112,
+    "name": "Caps",
     "images": [
       "/fire-safety/caps-2/caps-2-1.png",
       "/fire-safety/caps-2/caps-2-2.png",
@@ -1340,8 +1327,8 @@
     "subcategory": "Pipe Fittings"
   },
   {
-    "id": 114,
-    "name": "LOCKNUTS",
+    "id": 113,
+    "name": "Locknuts",
     "images": [
       "/fire-safety/locknuts/locknuts-1.png",
       "/fire-safety/locknuts/locknuts-2.png",
@@ -1350,8 +1337,8 @@
     "subcategory": "Pipe Fittings"
   },
   {
-    "id": 115,
-    "name": "OVAL FLANGES",
+    "id": 114,
+    "name": "Oval Flanges",
     "images": [
       "/fire-safety/oval-flanges/oval-flanges-1.png",
       "/fire-safety/oval-flanges/oval-flanges-2.png",
@@ -1360,8 +1347,8 @@
     "subcategory": "Pipe Fittings"
   },
   {
-    "id": 116,
-    "name": "FLOOR FLANGES WITHOUT HOLES",
+    "id": 115,
+    "name": "Floor Flanges Without Holes",
     "images": [
       "/fire-safety/floor-flanges-without-holes/floor-flanges-without-holes-1.png",
       "/fire-safety/floor-flanges-without-holes/floor-flanges-without-holes-2.png",
@@ -1370,8 +1357,8 @@
     "subcategory": "Pipe Fittings"
   },
   {
-    "id": 117,
-    "name": "FLOOR FLANGES 4 HOLES",
+    "id": 116,
+    "name": "Floor Flanges 4 Holes",
     "images": [
       "/fire-safety/floor-flanges-4-holes/floor-flanges-4-holes-1.png",
       "/fire-safety/floor-flanges-4-holes/floor-flanges-4-holes-2.png",
@@ -1380,8 +1367,8 @@
     "subcategory": "Pipe Fittings"
   },
   {
-    "id": 118,
-    "name": "FLOOR FLANGES",
+    "id": 117,
+    "name": "Floor Flanges",
     "images": [
       "/fire-safety/floor-flanges/floor-flanges-1.png",
       "/fire-safety/floor-flanges/floor-flanges-2.png",
@@ -1393,8 +1380,8 @@
     }
   },
   {
-    "id": 119,
-    "name": "UNION FLAT SEAT",
+    "id": 118,
+    "name": "Union Flat Seat",
     "images": [
       "/fire-safety/union-flat-seat-2/union-flat-seat-2-1.png",
       "/fire-safety/union-flat-seat-2/union-flat-seat-2-2.png",
@@ -1403,8 +1390,8 @@
     "subcategory": "Pipe Fittings"
   },
   {
-    "id": 120,
-    "name": "UNION CONICAL JOINT IRON TO IRON FEMALE",
+    "id": 119,
+    "name": "Union Conical Joint Iron to Iron Female",
     "images": [
       "/fire-safety/union-conical-joint-iron-to-iron-female/union-conical-joint-iron-to-iron-female-1.png",
       "/fire-safety/union-conical-joint-iron-to-iron-female/union-conical-joint-iron-to-iron-female-2.png",
@@ -1413,8 +1400,8 @@
     "subcategory": "Pipe Fittings"
   },
   {
-    "id": 121,
-    "name": "UNION BRASS SEAT",
+    "id": 120,
+    "name": "Union Brass Seat",
     "images": [
       "/fire-safety/union-brass-seat/union-brass-seat-1.png",
       "/fire-safety/union-brass-seat/union-brass-seat-2.png",
