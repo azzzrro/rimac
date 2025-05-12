@@ -50,7 +50,7 @@ export default function ProductsListPage() {
   const filteredProducts =
     selectedSubcategory === "All"
       ? currentCategory.products
-      : currentCategory.products.filter(
+      : currentCategory.products?.filter(
           (product: Product) => product.subcategory === selectedSubcategory
         );
 
@@ -109,7 +109,7 @@ export default function ProductsListPage() {
           animate="show"
           className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8"
         >
-          {filteredProducts.map((product: Product) => (
+          {filteredProducts?.map((product: Product) => (
             <motion.div key={product.id} variants={item} className="group">
               {category === "fire-safety" ? (
                 <Link
