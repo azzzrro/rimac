@@ -94,34 +94,31 @@ const HomeCards = () => {
         {/* Card Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {benefits.map((benefit, index) => (
-            <div
+            <motion.div
               key={index}
-              className="relative h-72 rounded-xl overflow-hidden shadow-lg group bg-white"
+              whileHover={{ y: -8, boxShadow: "0 8px 32px rgba(0,0,0,0.15)" }}
+              transition={{ type: "spring", stiffness: 200, damping: 20 }}
+              className="relative h-72 rounded-2xl overflow-hidden bg-white/70 backdrop-blur-md shadow-lg group border border-gray-200"
             >
-              {/* Background animation (optional) */}
-              <motion.div
-                whileHover={{ scale: 1.05 }}
-                transition={{ type: "spring", stiffness: 200, damping: 20 }}
-                className="absolute inset-0 bg-gradient-to-br from-gray-100 to-gray-200 group-hover:scale-105 transition-transform duration-500"
-              />
-
-              {/* Overlay */}
-              <div className="absolute inset-0 bg-black/10 group-hover:bg-black/20 transition-colors duration-500" />
+              {/* Accent Bar */}
+              <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-blue-600 via-blue-400 to-blue-600" />
 
               {/* Content */}
-              <div className="relative h-full flex flex-col justify-center items-start p-6 space-y-4 z-10">
-                {/* Icon */}
-                <benefit.icon className="text-primary-500 w-10 h-10 text-blue-600" />
-
+              <div className="relative h-full flex flex-col justify-center items-center p-8 space-y-4 z-10">
+                {/* Icon with circular background */}
+                <div className="flex items-center justify-center w-16 h-16 rounded-full bg-blue-100 mb-2 shadow-md">
+                  <benefit.icon className="w-8 h-8 text-blue-600" />
+                </div>
                 {/* Title */}
-                <h3 className="text-xl font-semibold text-gray-800">
+                <h3 className="text-lg font-bold text-gray-800 text-center">
                   {benefit.title}
                 </h3>
-
                 {/* Description */}
-                <p className="text-sm text-gray-600">{benefit.description}</p>
+                <p className="text-sm text-gray-600 text-center">
+                  {benefit.description}
+                </p>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </section>

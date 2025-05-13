@@ -20,6 +20,14 @@ import {
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
 import Image from "next/image";
+import {
+  Building,
+  Flame,
+  Construction,
+  User,
+  MessageSquare,
+  Mail,
+} from "lucide-react";
 
 const HomeNavbar = () => {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
@@ -27,44 +35,49 @@ const HomeNavbar = () => {
     {
       title: "Building materials",
       href: "/categories/building-materials",
+      icon: <Building className="w-5 h-5 mr-2 inline" />,
     },
     {
       title: "Fire and Safety materials",
       href: "/categories/fire-safety",
+      icon: <Flame className="w-5 h-5 mr-2 inline" />,
     },
     {
       title: "Scaffolding",
       href: "/categories/scaffolding",
-    },
-    {
-      title: "Projects",
-      href: "/projects",
+      icon: <Construction className="w-5 h-5 mr-2 inline" />,
     },
     {
       title: "About Us",
-      href: "/about-us",
+      href: "/about",
+      icon: <User className="w-5 h-5 mr-2 inline" />,
     },
     {
       title: "Testimonials",
       href: "/testimonials",
+      icon: <MessageSquare className="w-5 h-5 mr-2 inline" />,
     },
     {
       title: "Contact Us",
-      href: "/contact-us",
+      href: "/contact",
+      icon: <Mail className="w-5 h-5 mr-2 inline" />,
     },
   ];
-  const components: { title: string; href: string }[] = [
+  const components: { title: string; href: string; icon: React.ReactNode }[] = [
     {
       title: "Building materials",
       href: "/categories/building-materials",
+      icon: <Building className="w-4 h-4 mr-2 inline" />,
     },
     {
       title: "Fire and Safety materials",
       href: "/categories/fire-safety",
+      icon: <Flame className="w-4 h-4 mr-2 inline" />,
     },
     {
       title: "Scaffolding",
       href: "/categories/scaffolding",
+      icon: <Construction className="w-4 h-4 mr-2 inline" />,
     },
   ];
   return (
@@ -101,6 +114,7 @@ const HomeNavbar = () => {
                       key={component.title}
                       title={component.title}
                       href={component.href}
+                      icon={component.icon}
                     ></ListItem>
                   ))}
                 </ul>
@@ -108,13 +122,7 @@ const HomeNavbar = () => {
             </NavigationMenuItem>
             <NavigationMenuItem>
               <NavigationMenuLink
-                className={navigationMenuTriggerStyle() + " bg-transparent"}
-              >
-                Projects
-              </NavigationMenuLink>
-            </NavigationMenuItem>
-            <NavigationMenuItem>
-              <NavigationMenuLink
+                href="/about"
                 className={navigationMenuTriggerStyle() + " bg-transparent"}
               >
                 About Us
@@ -122,6 +130,7 @@ const HomeNavbar = () => {
             </NavigationMenuItem>
             <NavigationMenuItem>
               <NavigationMenuLink
+                href="/testimonials"
                 className={navigationMenuTriggerStyle() + " bg-transparent"}
               >
                 Testimonials
@@ -129,6 +138,7 @@ const HomeNavbar = () => {
             </NavigationMenuItem>
             <NavigationMenuItem>
               <NavigationMenuLink
+                href="/contact"
                 className={navigationMenuTriggerStyle() + " bg-transparent"}
               >
                 Contact Us
@@ -140,7 +150,13 @@ const HomeNavbar = () => {
       <NavbarMenu className="gap-5">
         {menuItems.map((item, index) => (
           <NavbarMenuItem key={`${item}-${index}`}>
-            <Link className="w-full" color="primary" href={item.href} size="lg">
+            <Link
+              className="w-full flex items-center"
+              color="primary"
+              href={item.href}
+              size="lg"
+            >
+              {item.icon}
               {item.title}
             </Link>
           </NavbarMenuItem>
@@ -152,8 +168,8 @@ const HomeNavbar = () => {
 
 const ListItem = React.forwardRef<
   React.ElementRef<"a">,
-  React.ComponentPropsWithoutRef<"a">
->(({ className, title, ...props }, ref) => {
+  React.ComponentPropsWithoutRef<"a"> & { icon?: React.ReactNode }
+>(({ className, title, icon, ...props }, ref) => {
   return (
     <li>
       <NavigationMenuLink asChild>
@@ -165,7 +181,10 @@ const ListItem = React.forwardRef<
           )}
           {...props}
         >
-          <div className="text-sm font-medium leading-none">{title}</div>
+          <div className="flex items-center text-sm font-medium leading-none">
+            {icon}
+            {title}
+          </div>
         </a>
       </NavigationMenuLink>
     </li>
