@@ -107,7 +107,7 @@ export default function ProductsListPage() {
           variants={container}
           initial="hidden"
           animate="show"
-          className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8"
+          className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8"
         >
           {filteredProducts?.map((product: Product) => (
             <motion.div key={product.id} variants={item} className="group">

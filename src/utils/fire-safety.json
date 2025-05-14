@@ -5,7 +5,8 @@
     "images": [
       "/fire-safety/rigid-coupling/rigid-coupling_1.png",
       "/fire-safety/rigid-coupling/rigid-coupling_2.png",
-      "/fire-safety/rigid-coupling/rigid-coupling_3.png"
+      "/fire-safety/rigid-coupling/rigid-coupling_3.png",
+      "/fire-safety/rigid-coupling/rigid-coupling_4.png"
     ],
     "subcategory": "Ductile Iron Grooved Fittings and Couplings",
     "specs": {
@@ -18,7 +19,8 @@
     "images": [
       "/fire-safety/flexible-coupling/flexible-coupling_1.png",
       "/fire-safety/flexible-coupling/flexible-coupling_2.png",
-      "/fire-safety/flexible-coupling/flexible-coupling_3.png"
+      "/fire-safety/flexible-coupling/flexible-coupling_3.png",
+      "/fire-safety/flexible-coupling/flexible-coupling_4.png"
     ],
     "subcategory": "Ductile Iron Grooved Fittings and Couplings",
     "specs": {
@@ -31,7 +33,8 @@
     "images": [
       "/fire-safety/angle-coupling/angle-coupling_1.png",
       "/fire-safety/angle-coupling/angle-coupling_2.png",
-      "/fire-safety/angle-coupling/angle-coupling_3.png"
+      "/fire-safety/angle-coupling/angle-coupling_3.png",
+      "/fire-safety/angle-coupling/angle-coupling_4.png"
     ],
     "subcategory": "Ductile Iron Grooved Fittings and Couplings"
   },
@@ -43,7 +46,8 @@
       "/fire-safety/90-elbow/90-elbow_2.png",
       "/fire-safety/90-elbow/90-elbow_3.png",
       "/fire-safety/90-elbow/90-elbow_4.png",
-      "/fire-safety/90-elbow/90-elbow_5.png"
+      "/fire-safety/90-elbow/90-elbow_5.png",
+      "/fire-safety/90-elbow/90-elbow_6.png"
     ],
     "subcategory": "Ductile Iron Grooved Fittings and Couplings",
     "specs": {
@@ -57,9 +61,11 @@
     "images": [
       "/fire-safety/45-elbow/45-elbow-1.png",
       "/fire-safety/45-elbow/45-elbow-2.png",
-      "/fire-safety/45-elbow/45-elbow-3.png"
+      "/fire-safety/45-elbow/45-elbow-3.png",
+      "/fire-safety/45-elbow/45-elbow-4.png"
     ],
     "subcategory": "Ductile Iron Grooved Fittings and Couplings",
+    "description": "The JUNT grooved piping system is one of the most advanced, versatile, economical and reliable systems available today. After the pipe ends are grooved a gasket is stretched over the pipe ends.",
     "specs": {
       "Type": "XGQT02"
     }
@@ -70,7 +76,8 @@
     "images": [
       "/fire-safety/22.5-elbow/22.5-elbow-1.png",
       "/fire-safety/22.5-elbow/22.5-elbow-2.png",
-      "/fire-safety/22.5-elbow/22.5-elbow-3.png"
+      "/fire-safety/22.5-elbow/22.5-elbow-3.png",
+      "/fire-safety/22.5-elbow/22.5-elbow-4.png"
     ],
     "subcategory": "Ductile Iron Grooved Fittings and Couplings",
     "specs": {
@@ -204,7 +211,8 @@
       "/fire-safety/mechanical-tee-grooved/mechanical-tee-grooved-1.png",
       "/fire-safety/mechanical-tee-grooved/mechanical-tee-grooved-2.png",
       "/fire-safety/mechanical-tee-grooved/mechanical-tee-grooved-3.png",
-      "/fire-safety/mechanical-tee-grooved/mechanical-tee-grooved-4.png"
+      "/fire-safety/mechanical-tee-grooved/mechanical-tee-grooved-4.png",
+      "/fire-safety/mechanical-tee-grooved/mechanical-tee-grooved-5.png"
     ],
     "subcategory": "Ductile Iron Grooved Fittings and Couplings",
     "specs": {
