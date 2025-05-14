@@ -84,17 +84,17 @@ export default function ProductPage() {
           </Link>
         </motion.div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <div className="flex flex-col md:flex-row md:gap-10 gap-5">
           {/* Image Gallery */}
           <motion.div
             variants={container}
             initial="hidden"
             animate="show"
-            className="space-y-4"
+            className="md:w-1/3 space-y-4"
           >
             <motion.div
               variants={item}
-              className="relative aspect-square rounded-xl overflow-hidden bg-white shadow-lg"
+              className="relative aspect-square rounded-xl overflow-hidden bg-white shadow-lg flex items-center justify-start max-w-[400px] max-h-[400px]"
             >
               <div
                 ref={imgContainerRef}
@@ -135,7 +135,7 @@ export default function ProductPage() {
 
             <motion.div
               variants={item}
-              className={`grid p-1 grid-cols-4 gap-4 ${
+              className={`grid p-1 grid-cols-4 gap-4 max-w-[400px] ${
                 images.length > 4 ? "overflow-x-scroll" : ""
               }`}
             >
