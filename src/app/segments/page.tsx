@@ -2,7 +2,12 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { Building2, FireExtinguisher, Construction } from "lucide-react";
+import {
+  Building2,
+  FireExtinguisher,
+  Construction,
+  ChevronRight,
+} from "lucide-react";
 
 const categories = [
   {
@@ -12,7 +17,7 @@ const categories = [
     icon: Building2,
     image:
       "https://images.unsplash.com/photo-1672541298906-4aeb3edd3520?q=80&w=3269&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    href: "/categories/building-materials",
+    href: "/segments/building-materials",
   },
   {
     title: "Fire and Safety Materials",
@@ -21,7 +26,7 @@ const categories = [
     icon: FireExtinguisher,
     image:
       "https://images.unsplash.com/photo-1743422855094-25954652f8ad?q=80&w=3270&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    href: "/categories/fire-safety",
+    href: "/segments/fire-safety",
   },
   {
     title: "Scaffolding",
@@ -30,7 +35,7 @@ const categories = [
     icon: Construction,
     image:
       "https://images.unsplash.com/photo-1626471671222-9d89fe4c2668?q=80&w=3270&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    href: "/categories/scaffolding",
+    href: "/segments/scaffolding",
   },
 ];
 
@@ -77,7 +82,7 @@ export default function CategoriesPage() {
             transition={{ duration: 0.5 }}
             className="text-4xl md:text-6xl font-bold text-center mb-4"
           >
-            Our Categories
+            Our Products
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -92,7 +97,73 @@ export default function CategoriesPage() {
       </div>
 
       {/* Categories Grid */}
-      <div className="max-w-7xl mx-auto px-4 py-16">
+      <div className="max-w-7xl mx-auto px-4 md:py-16 py-8">
+        {/* Aluminum Banner Section */}
+        <div className="w-full md:mb-16 mb-8">
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+          >
+            <div className="block">
+              <div className="relative w-full h-64 md:h-80 rounded-2xl overflow-hidden shadow-2xl group">
+                {/* Background Image */}
+                <motion.div
+                  whileHover={{ scale: 1.05 }}
+                  transition={{ type: "spring", stiffness: 200, damping: 20 }}
+                  className="absolute inset-0 bg-cover bg-center transition-transform duration-700"
+                  style={{
+                    backgroundImage: `url('https://images.unsplash.com/photo-1714548870002-d25e8329039c?q=80&w=3132&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')`,
+                  }}
+                />
+
+                {/* Gradient Overlay */}
+                <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-transparent group-hover:from-black/80 group-hover:via-black/60 transition-all duration-500" />
+
+                {/* Content */}
+                <div className="relative h-full flex flex-col justify-end px-4 md:px-12 py-8 z-10">
+                  <div className="text-white max-w-2xl">
+                    <h2 className="text-2xl md:text-4xl font-bold md:mb-4 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+                      Aluminum Solutions
+                    </h2>
+                    <p className="text-[10px] md:text-medium text-gray-200 mb-6 leading-relaxed">
+                      Discover our premium aluminum coils, sheets, and profiles.
+                      Lightweight, durable, and corrosion-resistant materials
+                      perfect for modern construction and industrial
+                      applications.
+                    </p>
+                    <motion.div
+                      whileHover={{ x: 10 }}
+                      transition={{
+                        type: "spring",
+                        stiffness: 300,
+                        damping: 20,
+                      }}
+                    >
+                      <Link
+                        href="/segments/aluminum"
+                        className="flex items-center text-blue-400 font-semibold text-sm md:text-lg group-hover:text-blue-300 transition-colors cursor-pointer"
+                      >
+                        <span className="mr-2">Explore Aluminum Products</span>
+                        <motion.div
+                          whileHover={{ x: 5 }}
+                          transition={{
+                            type: "spring",
+                            stiffness: 400,
+                            damping: 20,
+                          }}
+                        >
+                          <ChevronRight className="w-6 h-6" />
+                        </motion.div>
+                      </Link>
+                    </motion.div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+        </div>
         <motion.div
           variants={container}
           initial="hidden"

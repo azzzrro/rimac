@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import { scaffoldingSubcategoryDetails, categoryData } from "@/utils/constants";
+import { scaffoldingSegmentData, segmentData } from "@/utils/constants";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import {
   Accordion,
@@ -19,10 +19,10 @@ import {
 } from "@/components/ui/table";
 import Image from "next/image";
 
-const scaffoldingData = categoryData["scaffolding"];
+const scaffoldingData = segmentData["scaffolding"];
 const subcategories = scaffoldingData.subcategories;
 
-const defaultSubcategory = subcategories[0];
+const defaultSubcategory = subcategories?.[0];
 
 const colorVariants = {
   blue: "bg-blue-600",
@@ -32,10 +32,10 @@ const colorVariants = {
 
 const ScaffoldingPage = () => {
   const [selectedSubcategory, setSelectedSubcategory] =
-    useState<string>(defaultSubcategory);
+    useState<string>(defaultSubcategory || "");
   const details =
-    scaffoldingSubcategoryDetails[
-      selectedSubcategory as keyof typeof scaffoldingSubcategoryDetails
+    scaffoldingSegmentData[
+      selectedSubcategory as keyof typeof scaffoldingSegmentData
     ];
 
   return (
@@ -61,7 +61,7 @@ const ScaffoldingPage = () => {
           transition={{ duration: 0.5, delay: 0.2 }}
           className="flex flex-wrap justify-center gap-4 mb-12"
         >
-          {subcategories.map((subcategory: string) => (
+          {subcategories?.map((subcategory: string) => (
             <button
               key={subcategory}
               onClick={() => setSelectedSubcategory(subcategory)}

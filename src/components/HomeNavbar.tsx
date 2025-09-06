@@ -27,6 +27,7 @@ import {
   User,
   MessageSquare,
   Mail,
+  Layers,
 } from "lucide-react";
 
 const HomeNavbar = () => {
@@ -34,17 +35,17 @@ const HomeNavbar = () => {
   const menuItems = [
     {
       title: "Building materials",
-      href: "/categories/building-materials",
+      href: "/segments/building-materials",
       icon: <Building className="w-5 h-5 mr-2 inline" />,
     },
     {
       title: "Fire and Safety materials",
-      href: "/categories/fire-safety",
+      href: "/segments/fire-safety",
       icon: <Flame className="w-5 h-5 mr-2 inline" />,
     },
     {
       title: "Scaffolding",
-      href: "/categories/scaffolding",
+      href: "/segments/scaffolding",
       icon: <Construction className="w-5 h-5 mr-2 inline" />,
     },
     {
@@ -65,18 +66,23 @@ const HomeNavbar = () => {
   ];
   const components: { title: string; href: string; icon: React.ReactNode }[] = [
     {
+      title: "Aluminum",
+      href: "/segments/aluminum",
+      icon: <Layers className="w-4 h-4 mr-2 inline" />,
+    },
+    {
       title: "Building materials",
-      href: "/categories/building-materials",
+      href: "/segments/building-materials",
       icon: <Building className="w-4 h-4 mr-2 inline" />,
     },
     {
       title: "Fire and Safety materials",
-      href: "/categories/fire-safety",
+      href: "/segments/fire-safety",
       icon: <Flame className="w-4 h-4 mr-2 inline" />,
     },
     {
       title: "Scaffolding",
-      href: "/categories/scaffolding",
+      href: "/segments/scaffolding",
       icon: <Construction className="w-4 h-4 mr-2 inline" />,
     },
   ];
@@ -105,7 +111,7 @@ const HomeNavbar = () => {
           <NavigationMenuList>
             <NavigationMenuItem>
               <NavigationMenuTrigger className="bg-transparent">
-                <Link href="/categories">Categories</Link>
+                <Link href="/segments">Our Products</Link>
               </NavigationMenuTrigger>
               <NavigationMenuContent>
                 <ul className="grid w-[100px] gap-3 p-2 md:w-[200px] md:grid-cols-1 lg:w-[200px] ">

@@ -40,7 +40,7 @@ const item = {
 export default function ProductPage() {
   const params = useParams();
   const searchParams = useSearchParams();
-  const category = params.category as string;
+  const segment = params.segment as string;
 
   // Get product details from URL params
   const name = searchParams.get("name");
@@ -50,6 +50,9 @@ export default function ProductPage() {
   const specs = searchParams.get("specs")
     ? JSON.parse(searchParams.get("specs")!)
     : {};
+  const advantages = searchParams.get("advantages")
+    ? JSON.parse(searchParams.get("advantages")!)
+    : [];
 
   const [selectedImage, setSelectedImage] = useState(0);
   const [zoom, setZoom] = useState(false);
@@ -76,11 +79,11 @@ export default function ProductPage() {
           className="mb-8"
         >
           <Link
-            href={`/categories/${category}`}
+            href={`/segments/${segment}`}
             className="inline-flex items-center text-gray-600 hover:text-gray-900 transition-colors"
           >
             <ChevronLeft className="w-5 h-5 mr-1" />
-            Back to {category.replace(/-/g, " ")}
+            Back to {segment.replace(/-/g, " ")}
           </Link>
         </motion.div>
 
@@ -199,6 +202,24 @@ export default function ProductPage() {
                       <p className="text-lg font-semibold text-gray-900">
                         {value as string}
                       </p>
+                    </div>
+                  ))}
+                </div>
+              </motion.div>
+            )}
+
+            {advantages.length > 0 && (
+              <motion.div variants={item}>
+                <h2 className="text-2xl font-semibold text-gray-900 mb-4">
+                  Advantages
+                </h2>
+                <div className="grid grid-cols-2 gap-4">
+                  {advantages.map((advantage: string) => (
+                    <div
+                      key={advantage}
+                      className="bg-white p-4 rounded-lg shadow-sm"
+                    >
+                      {advantage}
                     </div>
                   ))}
                 </div>
