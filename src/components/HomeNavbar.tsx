@@ -34,6 +34,11 @@ const HomeNavbar = () => {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
   const menuItems = [
     {
+      title: "Aluminum",
+      href: "/segments/aluminum",
+      icon: <Layers className="w-5 h-5 mr-2 inline" />,
+    },
+    {
       title: "Building materials",
       href: "/segments/building-materials",
       icon: <Building className="w-5 h-5 mr-2 inline" />,

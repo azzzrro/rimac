@@ -106,7 +106,7 @@ export default function ProductsListPage() {
                       <h2 className="text-2xl md:text-4xl font-bold md:mb-4 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
                         Top Quality Aluminum
                       </h2>
-                      <p className="text-[10px] md:text-medium text-gray-200 mb-6 leading-relaxed">
+                      <p className="text-[10px] md:text-medium text-gray-200 md:mb-6 leading-relaxed">
                         Discover our premium aluminum coils, sheets, and
                         profiles. Lightweight, durable, and corrosion-resistant
                         materials perfect for modern construction and industrial

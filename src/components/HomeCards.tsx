@@ -156,7 +156,7 @@ const HomeCards = () => {
 
       <section className="pb-16 px-6 max-w-7xl mx-auto cursor-pointer">
         {/* Heading */}
-        <h2 className="text-3xl md:text-3xl font-bold mb-8">Why Choose RIMC</h2>
+        <h2 className="text-3xl md:text-3xl font-bold mb-8">Why Choose RIMAC?</h2>
 
         {/* Card Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-8">
