@@ -76,50 +76,6 @@ export default function ProductsListPage() {
           <p className="text-xl text-gray-600">{currentSegment.description}</p>
         </motion.div>
 
-        {/* For aluminum segment, we show banner */}
-        {segment === "aluminum" && (
-          <div className="w-full md:mb-8">
-            <motion.div
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.3 }}
-              transition={{ duration: 0.8, ease: "easeOut" }}
-            >
-              <div className="block">
-                <div className="relative w-full h-64 md:h-80 rounded-2xl overflow-hidden shadow-2xl group">
-                  {/* Background Image */}
-                  <motion.div
-                    whileHover={{ scale: 1.05 }}
-                    transition={{ type: "spring", stiffness: 200, damping: 20 }}
-                    className="absolute inset-0 bg-cover bg-center transition-transform duration-700"
-                    style={{
-                      backgroundImage: `url('https://images.unsplash.com/photo-1714548856510-d32f054b8f3a?q=80&w=3132&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')`,
-                    }}
-                  />
-
-                  {/* Gradient Overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-transparent group-hover:from-black/80 group-hover:via-black/60 transition-all duration-500" />
-
-                  {/* Content */}
-                  <div className="relative h-full flex flex-col justify-end px-4 md:px-12 py-8 z-10">
-                    <div className="text-white max-w-2xl">
-                      <h2 className="text-2xl md:text-4xl font-bold md:mb-4 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
-                        Top Quality Aluminum
-                      </h2>
-                      <p className="text-[10px] md:text-medium text-gray-200 md:mb-6 leading-relaxed">
-                        Discover our premium aluminum coils, sheets, and
-                        profiles. Lightweight, durable, and corrosion-resistant
-                        materials perfect for modern construction and industrial
-                        applications.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </motion.div>
-          </div>
-        )}
-
         {/* Filter */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -153,17 +109,6 @@ export default function ProductsListPage() {
           animate="show"
           className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8"
         >
-          {/* Heading for aluminum segment */}
-          {segment === "aluminum" && (
-            <div className="col-span-full md:mb-8">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 text-center">
-                Our Products
-              </h2>
-              <p className="text-lg text-gray-600 text-center mt-4 max-w-2xl mx-auto">
-                Explore our premium aluminum products.
-              </p>
-            </div>
-          )}
           {filteredProducts?.map((product: Product) => (
             <motion.div key={product.id} variants={item} className="group">
               {segment === "fire-safety" || segment === "aluminum" ? (
@@ -265,49 +210,6 @@ export default function ProductsListPage() {
             </motion.div>
           ))}
         </motion.div>
-
-        {/* Benefits Section - Only for aluminum segment */}
-        {segment === "aluminum" && currentSegment.benefits && (
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.4 }}
-            className="mt-16"
-          >
-            <div className="text-center mb-6 md:mb-12">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">
-                Benefits
-              </h2>
-              <p className="text-lg text-gray-600">
-                Why choose our aluminum solutions for your projects
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {currentSegment.benefits.map((benefit, index) => (
-                <motion.div
-                  key={benefit.title}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: 0.1 * index }}
-                  className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-100"
-                >
-                  <div className="flex flex-col items-center text-center">
-                    <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mb-4">
-                      <benefit.icon className="w-6 h-6 text-blue-600" />
-                    </div>
-                    <h3 className="text-xl font-semibold text-gray-900 mb-3">
-                      {benefit.title}
-                    </h3>
-                    <p className="text-sm text-gray-600 leading-relaxed">
-                      {benefit.description}
-                    </p>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-          </motion.div>
-        )}
       </div>
     </div>
   );

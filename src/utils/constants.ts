@@ -38,10 +38,25 @@ export interface Product {
   }[];
 }
 
+export interface Category {
+  id: number;
+  name: string;
+  images: string[];
+  description?: string;
+  specs?: ProductSpecs;
+  advantages?: string[];
+  benefits?: {
+    title: string;  
+    description: string;
+    icon: React.ElementType;
+  }[];
+}
+
 export interface SegmentData {
   title: string;
   description: string;
   subcategories?: string[];
+  categories?: Category[];
   products?: Product[];
   color: string;
   benefits?: {
@@ -56,85 +71,56 @@ export const segmentData: Record<string, SegmentData> = {
     title: "Aluminum Solutions",
     description:
       "Premium aluminum coils, sheets, and profiles for modern construction",
-    products: [
+    categories: [
       {
         id: 1,
-        name: "Aluminum Circle",
-        images: [
-          "/aluminum/aluminum_circle.png",
-          "/aluminum/aluminum_circle_2.png",
-        ],
-        subcategory: "Aluminum Circles",
-        description:
-          "Aluminum circles are widely used in various industries, including aerospace, automotive, and construction. They are known for their lightweight, strength, and durability, making them a popular choice for various applications.",
-        advantages: [
-          "High conductivity",
-          "Good corrosion resistant performance",
-          "High latent heat of melting",
-          "High-reflectance",
-          "Well welding property",
-          "Low strength",
-        ],
-      },
-      {
-        id: 2,
         name: "Aluminum Sheet",
         images: ["/aluminum/aluminum_sheet.png"],
-        subcategory: "Aluminum Sheets",
         description:
           "Widely used in aircraft, automobile, train, ship and other manufacturing industries",
         specs: {
-          Thickness: "0.2-200mm Customized",
-          Type: "Plate",
+          Thickness: "0.7mm - 8mm",
+          Size: "1220 x 2440 mm",
           Width: "10-2500mm",
+          Type: "Plate",
           Standard: "ASTM AISI JIS DIN GB",
-          "Aluminum grade": "1000-8000 Series",
+          "Aluminum grade": "1050, 1100",
         },
       },
       {
-        id: 3,
+        id: 2,
         name: "Aluminum Pipe",
         images: ["/aluminum/aluminum_pipe.png"],
-        subcategory: "Aluminum Pipes",
         description:
           "Good ductility and can be made into aluminum foil thinner than 0.01 mm at 100°C ~ 150°C",
         specs: {
-          Shape: "Round, Square, Rectangle",
-          Length: "Customers Requested",
-          Type: "Seamless/Welded",
           Thickness: "As Your require",
+          Length: "Customers Requested",
+          Shape: "Round, Square, Rectangle",
+          Type: "Seamless/Welded",
           "Alloy or not": "Is Alloy",
           "Aluminum grade": "1000-8000 Series",
         },
       },
       {
-        id: 4,
+        id: 3,
         name: "Aluminum Coil/Strip",
-        images: ["/aluminum/aluminum_coil.png"],
-        subcategory: "Aluminum Coils/Strips",
+        images: [
+          "/aluminum/aluminum_coil_1.png",
+          "/aluminum/aluminum_coil_2.png",
+          "/aluminum/aluminum_coil_3.png",
+          "/aluminum/aluminum_coil_4.png",
+        ],
         description:
           "Widely used in aircraft, automobile, train, ship and other manufacturing industries",
         specs: {
-          Tolerance: "±1%",
-          Standard: "GB/T3880,ASTM B209",
+          Thickness: "0.8mm - 6mm",
+          Size: "1220 x 2440 mm",
           Width: "10-2500mm",
+          Tolerance: "±1%",
           Type: "Coil/strip",
-          "Aluminum grade": "1000-8000 Series",
-        },
-      },
-      {
-        id: 5,
-        name: "Aluminum Bar",
-        images: ["/aluminum/aluminum_bar.png"],
-        subcategory: "Aluminum Bars",
-        description:
-          "Good ductility and can be made into aluminum foil thinner than 0.01 mm at 100°C ~ 150°C",
-        specs: {
-          Standard: "ASTM AISI JIS DIN GB",
-          Hardness: "60-150",
-          Grade: "1000series-7000 series",
-          Technique: "Cold Drawn, Extruded",
-          Shape: "Round",
+          Standard: "GB/T3880,ASTM B209",
+          "Aluminum grade": "1050, 1100",
         },
       },
     ],

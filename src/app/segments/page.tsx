@@ -25,7 +25,7 @@ const categories = [
       "Protect what matters most with our comprehensive range of fire safety equipment and materials.",
     icon: FireExtinguisher,
     image:
-      "https://images.unsplash.com/photo-1743422855094-25954652f8ad?q=80&w=3270&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "/fire-safety_home_card.jpeg",
     href: "/segments/fire-safety",
   },
   {
@@ -114,7 +114,7 @@ export default function CategoriesPage() {
                   transition={{ type: "spring", stiffness: 200, damping: 20 }}
                   className="absolute inset-0 bg-cover bg-center transition-transform duration-700"
                   style={{
-                    backgroundImage: `url('https://images.unsplash.com/photo-1714548870002-d25e8329039c?q=80&w=3132&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')`,
+                    backgroundImage: `url('/aluminum_card.png')`,
                   }}
                 />
 

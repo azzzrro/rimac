@@ -2,10 +2,16 @@
 
 import { motion } from "framer-motion";
 import { useParams, useSearchParams } from "next/navigation";
-import { useState, useRef } from "react";
+import { useState } from "react";
 import { ChevronLeft } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination, Thumbs } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "swiper/css/thumbs";
 
 const container = {
   hidden: { opacity: 0 },
@@ -54,189 +60,212 @@ export default function ProductPage() {
     ? JSON.parse(searchParams.get("advantages")!)
     : [];
 
-  const [selectedImage, setSelectedImage] = useState(0);
-  const [zoom, setZoom] = useState(false);
-  const [zoomPos, setZoomPos] = useState({ x: 0, y: 0 });
-  const imgContainerRef = useRef<HTMLDivElement>(null);
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const [thumbsSwiper, setThumbsSwiper] = useState<any>(null);
 
   if (!name || !images?.length) {
     return <div>Product not found</div>;
   }
 
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 0.5 }}
-      className="min-h-screen bg-gray-50 py-12"
-    >
-      <div className="max-w-7xl mx-auto px-4">
-        {/* Back Button */}
-        <motion.div
-          initial={{ opacity: 0, x: -20 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ delay: 0.2 }}
-          className="mb-8"
-        >
-          <Link
-            href={`/segments/${segment}`}
-            className="inline-flex items-center text-gray-600 hover:text-gray-900 transition-colors"
-          >
-            <ChevronLeft className="w-5 h-5 mr-1" />
-            Back to {segment.replace(/-/g, " ")}
-          </Link>
-        </motion.div>
-
-        <div className="flex flex-col md:flex-row md:gap-10 gap-5">
-          {/* Image Gallery */}
+    <>
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.5 }}
+        className="min-h-screen bg-gray-50 py-12"
+      >
+        <div className="max-w-7xl mx-auto px-4">
+          {/* Back Button */}
           <motion.div
-            variants={container}
-            initial="hidden"
-            animate="show"
-            className="md:w-1/3 space-y-4"
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ delay: 0.2 }}
+            className="mb-8"
           >
-            <motion.div
-              variants={item}
-              className="relative aspect-square rounded-xl overflow-hidden bg-white shadow-lg flex items-center justify-start max-w-[400px] max-h-[400px]"
+            <Link
+              href={`/segments/${segment}`}
+              className="inline-flex items-center text-gray-600 hover:text-gray-900 transition-colors"
             >
-              <div
-                ref={imgContainerRef}
-                className="w-full h-full relative"
-                onMouseEnter={() => setZoom(true)}
-                onMouseLeave={() => setZoom(false)}
-                onMouseMove={(e) => {
-                  const rect = imgContainerRef.current?.getBoundingClientRect();
-                  if (!rect) return;
-                  const x = ((e.clientX - rect.left) / rect.width) * 100;
-                  const y = ((e.clientY - rect.top) / rect.height) * 100;
-                  setZoomPos({ x, y });
-                }}
-                style={{ cursor: zoom ? "zoom-out" : "zoom-in" }}
+              <ChevronLeft className="w-5 h-5 mr-1" />
+              Back to {segment.replace(/-/g, " ")}
+            </Link>
+          </motion.div>
+
+          <div className="flex flex-col md:flex-row md:gap-10 gap-5">
+            {/* Image Gallery */}
+            <motion.div
+              variants={container}
+              initial="hidden"
+              animate="show"
+              className="md:w-2/5 space-y-4"
+            >
+              {/* Main Swiper */}
+              <motion.div
+                variants={item}
+                className="relative aspect-square rounded-xl overflow-hidden bg-white shadow-lg max-w-[500px] max-h-[500px]"
               >
-                <Image
-                  src={images[selectedImage] || ""}
-                  alt={name}
-                  fill
-                  unoptimized
-                  className="object-contain select-none pointer-events-none"
-                  draggable={false}
-                />
-                {zoom && (
-                  <div
-                    className="hidden md:block absolute inset-0 pointer-events-none z-20 rounded-xl border-2 border-blue-400"
-                    style={{
-                      backgroundImage: `url(${images[selectedImage]})`,
-                      backgroundRepeat: "no-repeat",
-                      backgroundPosition: `${zoomPos.x}% ${zoomPos.y}%`,
-                      backgroundSize: "125% 125%",
-                      opacity: 1,
-                    }}
-                  />
-                )}
-              </div>
-            </motion.div>
-
-            <motion.div
-              variants={item}
-              className={`grid p-1 grid-cols-4 gap-4 max-w-[400px] ${
-                images.length > 4 ? "overflow-x-scroll" : ""
-              }`}
-            >
-              {images.map((img: string, index: number) => (
-                <button
-                  key={index}
-                  onClick={() => setSelectedImage(index)}
-                  className={`relative aspect-square rounded-lg overflow-hidden transition-all duration-300 ${
-                    selectedImage === index
-                      ? "ring-2 ring-blue-500"
-                      : "hover:ring-2 hover:ring-gray-300"
-                  }`}
+                <Swiper
+                  modules={[Navigation, Pagination, Thumbs]}
+                  thumbs={{ swiper: thumbsSwiper }}
+                  navigation
+                  pagination={{ clickable: true }}
+                  className="h-full w-full rounded-xl"
                 >
-                  <Image
-                    src={img || ""}
-                    alt={`${name} - ${index + 1}`}
-                    fill
-                    unoptimized
-                    className="object-cover"
-                  />
-                </button>
-              ))}
-            </motion.div>
-          </motion.div>
-
-          {/* Product Info */}
-          <motion.div
-            variants={container}
-            initial="hidden"
-            animate="show"
-            className="space-y-6"
-          >
-            <motion.div variants={item}>
-              <h1 className="text-4xl font-bold text-gray-900 mb-2">{name}</h1>
-              <p className="text-lg text-gray-600">{subcategory}</p>
-            </motion.div>
-
-            {description && (
-              <motion.div variants={item} className="prose max-w-none">
-                <h2 className="text-2xl font-semibold text-gray-900 mb-4">
-                  Product Description
-                </h2>
-                <p className="text-gray-600">{description}</p>
-              </motion.div>
-            )}
-
-            {Object.keys(specs).length > 0 && (
-              <motion.div variants={item}>
-                <h2 className="text-2xl font-semibold text-gray-900 mb-4">
-                  Specifications
-                </h2>
-                <div className="grid grid-cols-2 gap-4">
-                  {Object.entries(specs).map(([key, value]) => (
-                    <div
-                      key={key}
-                      className="bg-white p-4 rounded-lg shadow-sm"
-                    >
-                      <h3 className="text-sm font-medium text-gray-500">
-                        {key}
-                      </h3>
-                      <p className="text-lg font-semibold text-gray-900">
-                        {value as string}
-                      </p>
-                    </div>
+                  {images.map((img: string, index: number) => (
+                    <SwiperSlide key={index}>
+                      <div className="relative w-full h-full flex items-center justify-center">
+                        <Image
+                          src={img || ""}
+                          alt={`${name} - ${index + 1}`}
+                          fill
+                          unoptimized
+                          className="object-contain"
+                          draggable={false}
+                        />
+                      </div>
+                    </SwiperSlide>
                   ))}
-                </div>
+                </Swiper>
               </motion.div>
-            )}
 
-            {advantages.length > 0 && (
-              <motion.div variants={item}>
-                <h2 className="text-2xl font-semibold text-gray-900 mb-4">
-                  Advantages
-                </h2>
-                <div className="grid grid-cols-2 gap-4">
-                  {advantages.map((advantage: string) => (
-                    <div
-                      key={advantage}
-                      className="bg-white p-4 rounded-lg shadow-sm"
-                    >
-                      {advantage}
-                    </div>
-                  ))}
-                </div>
-              </motion.div>
-            )}
+              {/* Thumbnails Swiper */}
+              {images.length > 1 && (
+                <motion.div variants={item} className="max-w-[500px]">
+                  <Swiper
+                    onSwiper={setThumbsSwiper}
+                    spaceBetween={10}
+                    slidesPerView={4}
+                    watchSlidesProgress={true}
+                    className="thumbs-swiper"
+                  >
+                    {images.map((img: string, index: number) => (
+                      <SwiperSlide key={index}>
+                        <div className="relative aspect-square rounded-lg overflow-hidden cursor-pointer hover:opacity-75 transition-opacity">
+                          <Image
+                            src={img || ""}
+                            alt={`${name} thumbnail - ${index + 1}`}
+                            fill
+                            unoptimized
+                            className="object-cover"
+                          />
+                        </div>
+                      </SwiperSlide>
+                    ))}
+                  </Swiper>
+                </motion.div>
+              )}
+            </motion.div>
 
+            {/* Product Info */}
             <motion.div
-              variants={item}
-              className="flex flex-col sm:flex-row gap-4 pt-6"
+              variants={container}
+              initial="hidden"
+              animate="show"
+              className="space-y-6"
             >
-              <button className="px-8 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">
-                Contact Sales
-              </button>
+              <motion.div variants={item}>
+                <h1 className="text-4xl font-bold text-gray-900 mb-2">
+                  {name}
+                </h1>
+                <p className="text-lg text-gray-600">{subcategory}</p>
+              </motion.div>
+
+              {description && (
+                <motion.div variants={item} className="prose max-w-none">
+                  <h2 className="text-2xl font-semibold text-gray-900 mb-4">
+                    Product Description
+                  </h2>
+                  <p className="text-gray-600">{description}</p>
+                </motion.div>
+              )}
+
+              {Object.keys(specs).length > 0 && (
+                <motion.div variants={item}>
+                  <h2 className="text-2xl font-semibold text-gray-900 mb-4">
+                    Specifications
+                  </h2>
+                  <div className="grid grid-cols-2 gap-4">
+                    {Object.entries(specs).map(([key, value]) => (
+                      <div
+                        key={key}
+                        className="bg-white p-4 rounded-lg shadow-sm"
+                      >
+                        <h3 className="text-sm font-medium text-gray-500">
+                          {key}
+                        </h3>
+                        <p className="text-lg font-semibold text-gray-900">
+                          {value as string}
+                        </p>
+                      </div>
+                    ))}
+                  </div>
+                </motion.div>
+              )}
+
+              {advantages.length > 0 && (
+                <motion.div variants={item}>
+                  <h2 className="text-2xl font-semibold text-gray-900 mb-4">
+                    Advantages
+                  </h2>
+                  <div className="grid grid-cols-2 gap-4">
+                    {advantages.map((advantage: string) => (
+                      <div
+                        key={advantage}
+                        className="bg-white p-4 rounded-lg shadow-sm"
+                      >
+                        {advantage}
+                      </div>
+                    ))}
+                  </div>
+                </motion.div>
+              )}
+
+              <motion.div
+                variants={item}
+                className="flex flex-col sm:flex-row gap-4 pt-6"
+              >
+                <button className="px-8 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">
+                  Contact Sales
+                </button>
+              </motion.div>
             </motion.div>
-          </motion.div>
+          </div>
         </div>
-      </div>
-    </motion.div>
+      </motion.div>
+
+      <style jsx global>{`
+        .thumbs-swiper .swiper-slide {
+          opacity: 0.4;
+          transition: opacity 0.3s;
+        }
+
+        .thumbs-swiper .swiper-slide-thumb-active {
+          opacity: 1;
+          border: 2px solid #3b82f6;
+          border-radius: 0.5rem;
+        }
+
+        .swiper-button-next,
+        .swiper-button-prev {
+          color: #3b82f6;
+          background: rgba(255, 255, 255, 0.9);
+          border-radius: 50%;
+          width: 40px;
+          height: 40px;
+          margin-top: -20px;
+        }
+
+        .swiper-button-next:after,
+        .swiper-button-prev:after {
+          font-size: 16px;
+          font-weight: bold;
+        }
+
+        .swiper-pagination-bullet {
+          background: #3b82f6;
+        }
+      `}</style>
+    </>
   );
 }
