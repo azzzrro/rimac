@@ -36,11 +36,11 @@ const item = {
   },
 };
 
-export default function ProductsListPage({
+const ProductsListPage = ({
   aluminumCategory,
 }: {
   aluminumCategory?: string;
-}) {
+}) => {
   const params = useParams();
   const segment = params.segment
     ? (params.segment as string)
@@ -232,4 +232,6 @@ export default function ProductsListPage({
       </div>
     </div>
   );
-}
+};
+
+export default ProductsListPage;
