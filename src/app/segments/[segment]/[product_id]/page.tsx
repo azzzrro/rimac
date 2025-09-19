@@ -50,7 +50,6 @@ export default function ProductPage() {
 
   // Get product details from URL params
   const name = searchParams.get("name");
-  const key = searchParams.get("key");
   const images = JSON.parse(searchParams.get("images") || "[]");
   const subcategory = searchParams.get("subcategory");
   const description = searchParams.get("description") || "";
@@ -67,10 +66,6 @@ export default function ProductPage() {
   if (!name || !images?.length) {
     return <div>Product not found</div>;
   }
-
-  const backPath = !segment
-    ? `/segments/aluminum/${key}`
-    : `/segments/${segment}`;
 
   return (
     <>
@@ -89,11 +84,11 @@ export default function ProductPage() {
             className="mb-8"
           >
             <Link
-              href={backPath}
+              href={`/segments/${segment}`}
               className="inline-flex items-center text-gray-600 hover:text-gray-900 transition-colors"
             >
               <ChevronLeft className="w-5 h-5 mr-1" />
-              Back to {!segment ? `${name}` : `${segment.replace(/-/g, " ")}`}
+              Back to {segment.replace(/-/g, " ")}
             </Link>
           </motion.div>
 
@@ -230,12 +225,9 @@ export default function ProductPage() {
                 variants={item}
                 className="flex flex-col sm:flex-row gap-4 pt-6"
               >
-                <Link
-                  href="/contact"
-                  className="inline-flex items-center justify-center px-8 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-semibold"
-                >
+                <button className="px-8 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">
                   Contact Sales
-                </Link>
+                </button>
               </motion.div>
             </motion.div>
           </div>
