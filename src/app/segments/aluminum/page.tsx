@@ -64,7 +64,7 @@ const AluminumPage = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
-          className="mb-12"
+          className="mb-12 mt-14"
         >
           <div className="text-center mb-8">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -79,7 +79,7 @@ const AluminumPage = () => {
           <div className="space-y-8">
             {currentSegment.categories?.map((category, categoryIndex) => (
               <motion.div
-                key={category.name}
+                key={category.title}
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{
@@ -104,12 +104,17 @@ const AluminumPage = () => {
                       >
                         {category.images.map(
                           (image: string, imageIndex: number) => (
-                            <SwiperSlide key={imageIndex} className="!h-full">
+                            <SwiperSlide
+                              key={imageIndex}
+                              className="!h-full p-3 md:p-0"
+                            >
                               <div className="relative w-full h-full flex items-center justify-center bg-white">
                                 <div className="relative w-[80%] h-[80%] rounded-xl overflow-hidden bg-gray-50">
                                   <Image
                                     src={image}
-                                    alt={`${category.name} - ${imageIndex + 1}`}
+                                    alt={`${category.title} - ${
+                                      imageIndex + 1
+                                    }`}
                                     fill
                                     sizes="(max-width: 768px) 100vw, 50vw"
                                     className="object-cover"
@@ -128,7 +133,7 @@ const AluminumPage = () => {
                   <div className="p-6 lg:p-8 flex flex-col justify-between">
                     <div>
                       <h3 className="text-xl lg:text-2xl font-bold text-gray-900 mb-3">
-                        {category.name}
+                        {category.title}
                       </h3>
                       <p className="text-gray-600 mb-5 leading-relaxed text-sm lg:text-base">
                         {category.description}
@@ -136,7 +141,7 @@ const AluminumPage = () => {
 
                       {/* Key Specifications */}
                       <div className="mb-6">
-                        <h4 className="text-base font-semibold text-gray-900 mb-3">
+                        <h4 className="text-base font-bold text-gray-900 mb-3">
                           Key Specifications
                         </h4>
                         <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
@@ -158,15 +163,20 @@ const AluminumPage = () => {
 
                     {/* CTA Button */}
                     <div className="flex flex-col sm:flex-row gap-3">
-                      <Link
-                        href={`/segments/aluminum?category=${encodeURIComponent(
-                          category.name
-                        )}`}
-                        className="inline-flex items-center justify-center px-5 py-2.5 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors duration-200 font-medium group text-sm"
-                      >
-                        Explore {category.name}
-                        <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-200" />
-                      </Link>
+                      {category.products && category.products.length > 0 ? (
+                        <Link
+                          href={`/segments/aluminum/${category.key}`}
+                          className="inline-flex items-center justify-center px-5 py-2.5 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors duration-200 font-medium group text-sm"
+                        >
+                          Explore {category.title}
+                          <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-200" />
+                        </Link>
+                      ) : (
+                        <div className="inline-flex items-center justify-center px-5 py-2.5 bg-gray-400 text-gray-200 rounded-lg cursor-not-allowed font-medium text-sm">
+                          Explore {category.title}
+                          <ArrowRight className="w-4 h-4 ml-2" />
+                        </div>
+                      )}
                       <Link
                         href="/contact"
                         className="inline-flex items-center justify-center px-5 py-2.5 border-2 border-gray-300 text-gray-700 rounded-lg hover:border-gray-400 hover:bg-gray-50 transition-colors duration-200 font-medium text-sm"

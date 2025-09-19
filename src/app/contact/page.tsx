@@ -111,6 +111,7 @@ export default function ContactPage() {
                   <SelectValue placeholder="Select a category..." />
                 </SelectTrigger>
                 <SelectContent>
+                  <SelectItem value="Aluminum">Aluminum</SelectItem>
                   <SelectItem value="Building Materials">
                     Building Materials
                   </SelectItem>
@@ -142,6 +143,7 @@ export default function ContactPage() {
                 placeholder="Enter your phone number..."
                 className="bg-gray-100 border-gray-300 text-gray-900 placeholder-gray-500 px-4 py-3 rounded-lg"
                 type="tel"
+                required
               />
             </div>
             <div className="flex flex-col gap-2 md:col-span-2">

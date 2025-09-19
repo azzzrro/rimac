@@ -27,7 +27,7 @@ export interface Product {
   id: number;
   name: string;
   images: string[];
-  subcategory: string;
+  subcategory?: string;
   specs?: ProductSpecs;
   description?: string;
   advantages?: string[];
@@ -40,16 +40,20 @@ export interface Product {
 
 export interface Category {
   id: number;
-  name: string;
+  title: string;
   images: string[];
+  key: string;
   description?: string;
   specs?: ProductSpecs;
   advantages?: string[];
   benefits?: {
-    title: string;  
+    title: string;
     description: string;
     icon: React.ElementType;
   }[];
+  products?: Product[];
+  subcategories?: string[];
+  color?: string;
 }
 
 export interface SegmentData {
@@ -74,8 +78,15 @@ export const segmentData: Record<string, SegmentData> = {
     categories: [
       {
         id: 1,
-        name: "Aluminum Sheet",
-        images: ["/aluminum/aluminum_sheet.png"],
+        title: "Aluminum Sheet",
+        key: "aluminum-sheet",
+        images: [
+          "/aluminum/aluminum_sheet_2.jpg",
+          "/aluminum/aluminum_sheet_3.webp",
+          "/aluminum/aluminum_sheet_4.webp",
+          "/aluminum/aluminum_sheet_5.webp",
+          "/aluminum/aluminum_sheet.png",
+        ],
         description:
           "Widely used in aircraft, automobile, train, ship and other manufacturing industries",
         specs: {
@@ -86,11 +97,45 @@ export const segmentData: Record<string, SegmentData> = {
           Standard: "ASTM AISI JIS DIN GB",
           "Aluminum grade": "1050, 1100",
         },
+        products: [
+          {
+            id: 1,
+            name: "PVC Laminate Aluminum Sheet",
+            images: [
+              "/aluminum/aluminum_pvc_2.png",
+              "/aluminum/aluminum_pvc_1.png",
+              "/aluminum/aluminum_pvc_3.png",
+              "/aluminum/aluminum_pvc_4.png",
+            ],
+            description:
+              "High-quality PVC laminated aluminum sheets offering excellent corrosion resistance and aesthetic appeal. Perfect for architectural applications, signage, and decorative panels with superior weather resistance.",
+            specs: {
+              "Core Material": "Aluminum Alloy 3003/5005",
+              "PVC Thickness": "0.12mm - 0.5mm",
+              "Total Thickness": "2mm - 6mm",
+              "Standard Size": "1220 x 2440mm",
+              "Maximum Width": "2100mm",
+              "PVC Colors": "White, Silver, Wood Grain",
+              "Surface Finish": "Glossy/Matte",
+              "Peel Strength": "≥8N/cm",
+              "Weather Resistance": "15+ Years",
+              "Fire Rating": "B1 Class",
+              "Temperature Range": "-20°C to +80°C",
+              Applications: "Facades, Signage, Interiors",
+            },
+          },
+        ],
       },
       {
         id: 2,
-        name: "Aluminum Pipe",
-        images: ["/aluminum/aluminum_pipe.png"],
+        title: "Aluminum Pipe",
+        key: "aluminum-pipe",
+        images: [
+          "/aluminum/aluminum_pipe_3.jpg",
+          "/aluminum/aluminum_pipe_2.webp",
+          "/aluminum/aluminum_pipe.jpg",
+          "/aluminum/aluminum_pipe_4.jpg",
+        ],
         description:
           "Good ductility and can be made into aluminum foil thinner than 0.01 mm at 100°C ~ 150°C",
         specs: {
@@ -104,12 +149,13 @@ export const segmentData: Record<string, SegmentData> = {
       },
       {
         id: 3,
-        name: "Aluminum Coil/Strip",
+        title: "Aluminum Coil/Strip",
+        key: "aluminum-coil-strip",
         images: [
-          "/aluminum/aluminum_coil_1.png",
-          "/aluminum/aluminum_coil_2.png",
+          "/aluminum/aluminum_coil_1.jpg",
+          "/aluminum/aluminum_coil_2.webp",
           "/aluminum/aluminum_coil_3.png",
-          "/aluminum/aluminum_coil_4.png",
+          "/aluminum/aluminum_coil_4.jpg",
         ],
         description:
           "Widely used in aircraft, automobile, train, ship and other manufacturing industries",

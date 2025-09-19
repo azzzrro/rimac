@@ -36,12 +36,24 @@ const item = {
   },
 };
 
-export default function ProductsListPage() {
+export default function ProductsListPage({
+  aluminumCategory,
+}: {
+  aluminumCategory?: string;
+}) {
   const params = useParams();
-  const segment = params.segment as string;
+  const segment = params.segment
+    ? (params.segment as string)
+    : aluminumCategory
+    ? "aluminum"
+    : "";
   const [selectedSubcategory, setSelectedSubcategory] = useState("All");
 
-  const currentSegment = segmentData[segment];
+  const currentSegment = aluminumCategory
+    ? segmentData["aluminum"]?.categories?.find(
+        (category) => category.key === aluminumCategory
+      )
+    : segmentData[segment];
 
   if (!currentSegment) {
     return <div>Category not found</div>;
@@ -59,6 +71,10 @@ export default function ProductsListPage() {
     red: "bg-red-600",
     green: "bg-green-600",
   };
+
+  const pathname = aluminumCategory
+    ? `/segments/aluminum/${aluminumCategory}`
+    : `/segments/${segment}`;
 
   return (
     <div className="min-h-screen bg-gray-50 py-12">
@@ -111,10 +127,10 @@ export default function ProductsListPage() {
         >
           {filteredProducts?.map((product: Product) => (
             <motion.div key={product.id} variants={item} className="group">
-              {segment === "fire-safety" || segment === "aluminum" ? (
+              {segment === "fire-safety" || aluminumCategory ? (
                 <Link
                   href={{
-                    pathname: `/segments/${segment}/${product.id}`,
+                    pathname: `${pathname}/${product.id}`,
                     query: {
                       name: product.name,
                       images: JSON.stringify(product.images),
@@ -148,14 +164,16 @@ export default function ProductsListPage() {
                       </h3>
                       {product.specs && (
                         <div className="mt-4 flex flex-wrap gap-2">
-                          {Object.entries(product.specs).map(([key, value]) => (
-                            <span
-                              key={key}
-                              className="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded"
-                            >
-                              {key}: {value}
-                            </span>
-                          ))}
+                          {Object.entries(product.specs)
+                            .slice(0, 4)
+                            .map(([key, value]) => (
+                              <span
+                                key={key}
+                                className="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded"
+                              >
+                                {key}: {value}
+                              </span>
+                            ))}
                         </div>
                       )}
                     </div>
