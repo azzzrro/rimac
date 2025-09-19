@@ -43,19 +43,14 @@ const item = {
   },
 };
 
-export default function ProductPage({
-  aluminumCategory,
-  aluminumCategoryName,
-}: {
-  aluminumCategory?: string;
-  aluminumCategoryName?: string;
-}) {
+export default function ProductPage() {
   const params = useParams();
   const searchParams = useSearchParams();
   const segment = params.segment as string;
 
   // Get product details from URL params
   const name = searchParams.get("name");
+  const key = searchParams.get("key");
   const images = JSON.parse(searchParams.get("images") || "[]");
   const subcategory = searchParams.get("subcategory");
   const description = searchParams.get("description") || "";
@@ -73,8 +68,8 @@ export default function ProductPage({
     return <div>Product not found</div>;
   }
 
-  const backPath = aluminumCategory
-    ? `/segments/aluminum/${aluminumCategory}`
+  const backPath = !segment
+    ? `/segments/aluminum/${key}`
     : `/segments/${segment}`;
 
   return (
@@ -98,10 +93,7 @@ export default function ProductPage({
               className="inline-flex items-center text-gray-600 hover:text-gray-900 transition-colors"
             >
               <ChevronLeft className="w-5 h-5 mr-1" />
-              Back to{" "}
-              {aluminumCategory
-                ? `${aluminumCategoryName}`
-                : `${segment.replace(/-/g, " ")}`}
+              Back to {!segment ? `${name}` : `${segment.replace(/-/g, " ")}`}
             </Link>
           </motion.div>
 

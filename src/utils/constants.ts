@@ -26,6 +26,7 @@ interface ProductSpecs {
 export interface Product {
   id: number;
   name: string;
+  key?: string;
   images: string[];
   subcategory?: string;
   specs?: ProductSpecs;
@@ -81,11 +82,11 @@ export const segmentData: Record<string, SegmentData> = {
         title: "Aluminum Sheet",
         key: "aluminum-sheet",
         images: [
-          "/aluminum/aluminum_sheet_2.jpg",
-          "/aluminum/aluminum_sheet_3.webp",
           "/aluminum/aluminum_sheet_4.webp",
+          "/aluminum/aluminum_sheet_3.webp",
           "/aluminum/aluminum_sheet_5.webp",
           "/aluminum/aluminum_sheet.png",
+          "/aluminum/aluminum_sheet_2.jpg",
         ],
         description:
           "Widely used in aircraft, automobile, train, ship and other manufacturing industries",

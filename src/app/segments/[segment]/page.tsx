@@ -133,6 +133,7 @@ export default function ProductsListPage({
                     pathname: `${pathname}/${product.id}`,
                     query: {
                       name: product.name,
+                      key: product.key,
                       images: JSON.stringify(product.images),
                       subcategory: product.subcategory,
                       ...(product.specs && {
