@@ -7,6 +7,7 @@ import {
   FireExtinguisher,
   Construction,
   ChevronRight,
+  Cylinder,
 } from "lucide-react";
 
 const categories = [
@@ -24,8 +25,7 @@ const categories = [
     description:
       "Protect what matters most with our comprehensive range of fire safety equipment and materials.",
     icon: FireExtinguisher,
-    image:
-      "/fire-safety_home_card.jpeg",
+    image: "/fire-safety_home_card.jpeg",
     href: "/segments/fire-safety",
   },
   {
@@ -36,6 +36,15 @@ const categories = [
     image:
       "https://images.unsplash.com/photo-1626471671222-9d89fe4c2668?q=80&w=3270&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     href: "/segments/scaffolding",
+  },
+  {
+    title: "Carbon Steel Pipes",
+    description:
+      "High-quality carbon steel pipes for all your construction needs.",
+    icon: Cylinder,
+    image:
+      "https://media.istockphoto.com/id/538025236/photo/heap-of-shiny-metal-steel-pipes-with-selective-focus-effect.jpg?s=612x612&w=0&k=20&c=NU2vEghQxU77iNNYFwXbt9Q9TRIJUq5TnsUeQjQVMdY=",
+    href: "/segments/carbon-steel-pipes",
   },
 ];
 
@@ -168,7 +177,7 @@ export default function CategoriesPage() {
           variants={container}
           initial="hidden"
           animate="show"
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
         >
           {categories.map((category, index) => (
             <motion.div key={category.title} variants={item}>

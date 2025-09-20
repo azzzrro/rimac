@@ -1,25 +1,50 @@
 "use client";
 import { motion } from "framer-motion";
-import { ShieldCheck, Truck, Users, Leaf, ChevronRight } from "lucide-react"; // Using lucide-react icons
+import {
+  ShieldCheck,
+  Truck,
+  Users,
+  Leaf,
+  ChevronRight,
+  Building2,
+  Shield,
+  Wrench,
+  Cylinder,
+} from "lucide-react"; // Using lucide-react icons
 import Link from "next/link";
 
 const services = [
   {
-    title: "Building materials",
+    title: "Building Materials",
+    description:
+      "High-quality construction materials for modern building projects",
     image:
       "https://images.unsplash.com/photo-1672541298906-4aeb3edd3520?q=80&w=3269&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     href: "/segments/building-materials",
+    icon: Building2,
   },
   {
-    title: "Fire and Safety materials",
+    title: "Fire and Safety",
+    description: "Comprehensive fire protection and safety solutions",
     image: "/fire-safety_home_card.jpeg",
     href: "/segments/fire-safety",
+    icon: Shield,
   },
   {
     title: "Scaffolding",
+    description: "Professional scaffolding systems for construction projects",
     image:
       "https://images.unsplash.com/photo-1626471671222-9d89fe4c2668?q=80&w=3270&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     href: "/segments/scaffolding",
+    icon: Wrench,
+  },
+  {
+    title: "Carbon Steel Pipes",
+    description: "Durable steel pipes for industrial and plumbing applications",
+    image:
+      "https://media.istockphoto.com/id/538025236/photo/heap-of-shiny-metal-steel-pipes-with-selective-focus-effect.jpg?s=612x612&w=0&k=20&c=NU2vEghQxU77iNNYFwXbt9Q9TRIJUq5TnsUeQjQVMdY=",
+    href: "/segments/carbon-steel-pipes",
+    icon: Cylinder,
   },
 ];
 
@@ -124,33 +149,101 @@ const HomeCards = () => {
         <h2 className="text-3xl md:text-3xl font-bold mb-8">Other Segments</h2>
 
         {/* Card Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-8">
+        <motion.div
+          variants={{
+            hidden: { opacity: 0 },
+            show: {
+              opacity: 1,
+              transition: {
+                staggerChildren: 0.1,
+              },
+            },
+          }}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, amount: 0.2 }}
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
+        >
           {services.map((service, index) => (
-            <Link
-              href={service.href}
-              key={index}
-              className="relative h-72 rounded-xl overflow-hidden shadow-lg group"
+            <motion.div
+              key={service.title}
+              variants={{
+                hidden: { opacity: 0, y: 20 },
+                show: { opacity: 1, y: 0 },
+              }}
             >
-              {/* Background Image (Animated Only) */}
-              <motion.div
-                whileHover={{ scale: 1.1 }}
-                transition={{ type: "spring", stiffness: 200, damping: 20 }}
-                className="absolute inset-0 bg-cover bg-center group-hover:scale-110 transition-transform duration-500"
-                style={{ backgroundImage: `url(${service.image})` }}
-              />
+              <Link href={service.href}>
+                <div className="group relative h-[400px] rounded-xl overflow-hidden shadow-lg cursor-pointer">
+                  {/* Background Image */}
+                  <motion.div
+                    whileHover={{ scale: 1.1 }}
+                    transition={{ type: "spring", stiffness: 200, damping: 20 }}
+                    className="absolute inset-0 bg-cover bg-center"
+                    style={{ backgroundImage: `url(${service.image})` }}
+                  />
 
-              {/* Overlay */}
-              <div className="absolute inset-0 bg-black/30 group-hover:bg-black/50 transition-colors duration-500" />
+                  {/* Overlay */}
+                  <div className="absolute inset-0 bg-black/50 group-hover:bg-black/60 transition-colors duration-300" />
 
-              {/* Text */}
-              <div className="absolute bottom-4 left-4">
-                <h3 className="text-white text-2xl font-semibold">
-                  {service.title}
-                </h3>
-              </div>
-            </Link>
+                  {/* Content */}
+                  <motion.div
+                    className="absolute inset-0 flex flex-col justify-end p-6"
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.3 + index * 0.1 }}
+                  >
+                    <motion.div
+                      initial={{ scale: 0.8, opacity: 0 }}
+                      animate={{ scale: 1, opacity: 1 }}
+                      transition={{ delay: 0.4 + index * 0.1 }}
+                    >
+                      <service.icon className="w-8 h-8 text-white mb-4" />
+                    </motion.div>
+                    <motion.h3
+                      className="text-2xl font-bold text-white mb-2"
+                      initial={{ opacity: 0, y: 10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ delay: 0.5 + index * 0.1 }}
+                    >
+                      {service.title}
+                    </motion.h3>
+                    <motion.p
+                      className="text-white/90 text-sm"
+                      initial={{ opacity: 0, y: 10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ delay: 0.6 + index * 0.1 }}
+                    >
+                      {service.description}
+                    </motion.p>
+
+                    {/* Hover Arrow */}
+                    <motion.div
+                      className="absolute bottom-6 right-6 transform translate-x-4 opacity-0 group-hover:translate-x-0 group-hover:opacity-100 transition-all duration-300"
+                      initial={{ opacity: 0, x: 20 }}
+                      animate={{ opacity: 0, x: 20 }}
+                      whileHover={{ opacity: 1, x: 0 }}
+                      transition={{ duration: 0.3 }}
+                    >
+                      <svg
+                        className="w-6 h-6 text-white"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M17 8l4 4m0 0l-4 4m4-4H3"
+                        />
+                      </svg>
+                    </motion.div>
+                  </motion.div>
+                </div>
+              </Link>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </section>
 
       <section className="pb-16 px-6 max-w-7xl mx-auto cursor-pointer">
