@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, Suspense } from "react";
 import { Mail, Phone, MapPin, Globe } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -14,7 +14,7 @@ import {
 import { useSearchParams } from "next/navigation";
 // import { toast } from "react-hot-toast";
 
-export default function ContactPage() {
+function ContactForm() {
   const searchParams = useSearchParams();
   const segment = searchParams.get("s");
   const product = searchParams.get("p");
@@ -101,46 +101,7 @@ Thank you!`;
   };
 
   return (
-    <div className="min-h-screen bg-gray-50 pb-16">
-      {/* Hero/Header Section */}
-
-      <section className="bg-cover bg-center bg-[url('/bg_new.jpg')] text-white py-16 px-4 relative min-h-[400px] md:min-h-[450px]">
-        {/* Optional: Add a dark overlay for readability */}
-        <div className="absolute inset-0 bg-black/60"></div>
-        <div className="relative max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-10 h-full">
-          <div className="flex-1 z-10">
-            <h1 className="text-4xl md:text-5xl font-bold mb-4">Contact Us</h1>
-            <h2 className="text-2xl font-semibold mb-4">
-              We&apos;d love to hear from you!
-            </h2>
-            <p className="text-sm mb-6">
-              Whether you have a question about our products, need a quote, or
-              want to discuss your next project, our team is ready to help.
-            </p>
-            <div className="flex flex-wrap gap-4 mt-6">
-              <span className="bg-blue-600 px-4 py-2 rounded-full text-sm font-semibold flex items-center gap-2">
-                <MapPin className="w-4 h-4" />
-                King Abdulaziz Road, Riyadh, Saudi Arabia
-              </span>
-              <span className="bg-blue-600 px-4 py-2 rounded-full text-sm font-semibold flex items-center gap-2">
-                <Phone className="w-4 h-4" />
-                0510800918
-              </span>
-              <span className="bg-blue-600 px-4 py-2 rounded-full text-sm font-semibold flex items-center gap-2">
-                <Mail className="w-4 h-4" />
-                info@rimac.co
-              </span>
-              <span className="bg-blue-600 px-4 py-2 rounded-full text-sm font-semibold flex items-center gap-2">
-                <Globe className="w-4 h-4" />
-                www.rimac.co
-              </span>
-            </div>
-          </div>
-          {/* Right side blank for alignment */}
-          <div className="flex-1" />
-        </div>
-      </section>
-
+    <>
       {/* Contact Form Section - below map */}
       <section className="w-full flex justify-center mt-[-60px] mb-12 px-4">
         <div className="w-full max-w-4xl bg-white rounded-2xl shadow-xl p-8 md:p-12 z-10 relative">
@@ -271,6 +232,63 @@ Thank you!`;
           </form>
         </div>
       </section>
+    </>
+  );
+}
+
+export default function ContactPage() {
+  return (
+    <div className="min-h-screen bg-gray-50 pb-16">
+      {/* Hero/Header Section */}
+      <section className="bg-cover bg-center bg-[url('/bg_new.jpg')] text-white py-16 px-4 relative min-h-[400px] md:min-h-[450px]">
+        {/* Optional: Add a dark overlay for readability */}
+        <div className="absolute inset-0 bg-black/60"></div>
+        <div className="relative max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-10 h-full">
+          <div className="flex-1 z-10">
+            <h1 className="text-4xl md:text-5xl font-bold mb-4">Contact Us</h1>
+            <h2 className="text-2xl font-semibold mb-4">
+              We&apos;d love to hear from you!
+            </h2>
+            <p className="text-sm mb-6">
+              Whether you have a question about our products, need a quote, or
+              want to discuss your next project, our team is ready to help.
+            </p>
+            <div className="flex flex-wrap gap-4 mt-6">
+              <span className="bg-blue-600 px-4 py-2 rounded-full text-sm font-semibold flex items-center gap-2">
+                <MapPin className="w-4 h-4" />
+                King Abdulaziz Road, Riyadh, Saudi Arabia
+              </span>
+              <span className="bg-blue-600 px-4 py-2 rounded-full text-sm font-semibold flex items-center gap-2">
+                <Phone className="w-4 h-4" />
+                0510800918
+              </span>
+              <span className="bg-blue-600 px-4 py-2 rounded-full text-sm font-semibold flex items-center gap-2">
+                <Mail className="w-4 h-4" />
+                info@rimac.co
+              </span>
+              <span className="bg-blue-600 px-4 py-2 rounded-full text-sm font-semibold flex items-center gap-2">
+                <Globe className="w-4 h-4" />
+                www.rimac.co
+              </span>
+            </div>
+          </div>
+          {/* Right side blank for alignment */}
+          <div className="flex-1" />
+        </div>
+      </section>
+
+      {/* Contact Form with Suspense */}
+      <Suspense
+        fallback={
+          <div className="w-full flex justify-center mt-[-60px] mb-12 px-4">
+            <div className="w-full max-w-4xl bg-white rounded-2xl shadow-xl p-8 md:p-12 z-10 relative">
+              <div className="text-center">Loading contact form...</div>
+            </div>
+          </div>
+        }
+      >
+        <ContactForm />
+      </Suspense>
 
       {/* Map Section - Full width, top */}
       <section className="w-full pt-8">
