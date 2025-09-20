@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { segmentData } from "@/utils/constants";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper/modules";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Shield, Award, Ruler, Gauge, Wrench, MailIcon } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import "swiper/css";
@@ -147,16 +147,59 @@ const AluminumPage = () => {
                         <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                           {Object.entries(category.specs || {})
                             .slice(0, 4)
-                            .map(([key, value]) => (
-                              <div key={key} className="flex flex-col">
-                                <span className="text-xs font-medium text-gray-500">
-                                  {key}
-                                </span>
-                                <span className="text-sm text-gray-900 font-semibold">
-                                  {String(value)}
-                                </span>
-                              </div>
-                            ))}
+                            .map(([key, value]) => {
+                              const getSpecIcon = (specKey: string) => {
+                                if (
+                                  specKey.toLowerCase().includes("grade") ||
+                                  specKey.toLowerCase().includes("material") ||
+                                  specKey.toLowerCase().includes("aluminum")
+                                )
+                                  return Award;
+                                if (
+                                  specKey.toLowerCase().includes("size") ||
+                                  specKey.toLowerCase().includes("range") ||
+                                  specKey.toLowerCase().includes("width") ||
+                                  specKey.toLowerCase().includes("length")
+                                )
+                                  return Ruler;
+                                if (
+                                  specKey.toLowerCase().includes("thickness") ||
+                                  specKey.toLowerCase().includes("wall")
+                                )
+                                  return Gauge;
+                                if (specKey.toLowerCase().includes("pressure"))
+                                  return Gauge;
+                                if (
+                                  specKey.toLowerCase().includes("finish") ||
+                                  specKey.toLowerCase().includes("surface") ||
+                                  specKey.toLowerCase().includes("coating")
+                                )
+                                  return Shield;
+                                if (
+                                  specKey.toLowerCase().includes("type") ||
+                                  specKey.toLowerCase().includes("standard")
+                                )
+                                  return Award;
+                                return Wrench;
+                              };
+                              const IconComponent = getSpecIcon(key);
+                              return (
+                                <div
+                                  key={key}
+                                  className="flex items-start space-x-2 p-2 bg-gray-50 rounded-lg"
+                                >
+                                  <IconComponent className="w-4 h-4 text-blue-600 mt-0.5 flex-shrink-0" />
+                                  <div className="flex flex-col min-w-0">
+                                    <span className="text-xs font-medium text-gray-500 truncate">
+                                      {key}
+                                    </span>
+                                    <span className="text-sm text-gray-900 font-semibold">
+                                      {String(value)}
+                                    </span>
+                                  </div>
+                                </div>
+                              );
+                            })}
                         </div>
                       </div>
                     </div>
@@ -178,10 +221,11 @@ const AluminumPage = () => {
                         </div>
                       )}
                       <Link
-                        href="/contact"
+                        href={`/contact?s=aluminum&p=${category.title}`}
                         className="inline-flex items-center justify-center px-5 py-2.5 border-2 border-gray-300 text-gray-700 rounded-lg hover:border-gray-400 hover:bg-gray-50 transition-colors duration-200 font-medium text-sm"
                       >
-                        Get Quote
+                        <MailIcon className="w-4 h-4 mr-2" />
+                        Enquire
                       </Link>
                     </div>
                   </div>

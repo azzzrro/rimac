@@ -254,6 +254,35 @@ export const segmentData: Record<string, SegmentData> = {
     ],
     color: "green",
   },
+  "carbon-steel-pipes": {
+    title: "Carbon Steel Pipes",
+    description:
+      "Carbon steel pipes are widely used in various industries, including construction, oil and gas, manufacturing, and transportation. These pipes are used in pipelines, bridges, buildings, gas and oil fields, and general mechanical engineering. They are also used to produce automotive parts, such as exhaust pipes.",
+    products: [
+      {
+        id: 1,
+        name: "Black Steel Pipes",
+        description:
+          "High-quality black steel pipes manufactured to ASTM A53 Grade B standards with black oxide finish for excellent corrosion resistance. Ideal for plumbing, structural, fire protection, and industrial applications.",
+        images: [
+          "/carbon-pipes/black_steel pipes_1.jpg",
+          "/carbon-pipes/black_steel pipes_2.jpg",
+          "/carbon-pipes/black_steel pipes_3.jpg",
+          "/carbon-pipes/black_steel pipes_4.jpg",
+        ],
+        specs: {
+          "Material Grade": "ASTM A53 Grade B",
+          "Size Range": '1/2" to 8" NPS',
+          "Wall Thickness": "Schedule 40 (2.77mm to 8.18mm)",
+          "Standard Length": "6 meters (20 feet)",
+          "Working Pressure": "Up to 150 PSI (10.3 bar)",
+          "Surface Finish": "Black Oxide Coating",
+          Applications: "Plumbing, HVAC, Fire Protection, Structural",
+        },
+      },
+    ],
+    color: "gray",
+  },
 };
 
 export const scaffoldingSegmentData = {
