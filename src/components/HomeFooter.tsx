@@ -44,10 +44,10 @@ const HomeFooter = () => {
             />
           </div>
           <p className="text-gray-300 text-sm leading-relaxed mb-6">
-            RIMAC is a leading manufacturer and supplier of high-quality
-            building materials in Saudi Arabia. With years of experience and
-            dedication to excellence, we provide innovative solutions for
-            construction projects across the region.
+            RIMAC is a leading supplier of high-quality building materials in
+            Saudi Arabia. With years of experience and dedication to excellence,
+            we provide innovative solutions for construction projects across the
+            region.
           </p>
           <div className="flex items-start space-x-3">
             <MapPin className="w-5 h-5 mt-1 text-blue-400" />
