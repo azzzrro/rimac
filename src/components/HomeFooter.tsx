@@ -52,7 +52,7 @@ const HomeFooter = () => {
           <div className="flex items-start space-x-3">
             <MapPin className="w-5 h-5 mt-1 text-blue-400" />
             <p className="text-gray-200">
-              King Abdulaziz Road, Riyadh, Saudi Arabia
+              Al Arid District, Riyadh, Saudi Arabia
             </p>
           </div>
           <div className="flex items-start space-x-3">

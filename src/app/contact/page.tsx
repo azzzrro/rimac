@@ -256,7 +256,7 @@ export default function ContactPage() {
             <div className="flex flex-wrap gap-4 mt-6">
               <span className="bg-blue-600 px-4 py-2 rounded-full text-sm font-semibold flex items-center gap-2">
                 <MapPin className="w-4 h-4" />
-                King Abdulaziz Road, Riyadh, Saudi Arabia
+                Al Arid District, Riyadh, Saudi Arabia
               </span>
               <span className="bg-blue-600 px-4 py-2 rounded-full text-sm font-semibold flex items-center gap-2">
                 <Phone className="w-4 h-4" />
